@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 JAN 2017 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 JAN 2017 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,39 +496,35 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]) [9]
 (./chapter1.tex
 Chapter 1.
-<figures/graph.png, id=130, 674.52pt x 536.7252pt>
-File: figures/graph.png Graphic file (type png)
- <use figures/graph.png>
-Package pdftex.def Info: figures/graph.png used on input line 28.
-(pdftex.def)             Requested size: 363.29877pt x 289.07999pt.
+
+Package natbib Warning: Citation `CT:Weiner:1999' on page 1 undefined on input 
+line 117.
+
+
+Package natbib Warning: Citation `CT:Phillips:1985' on page 1 undefined on inpu
+t line 118.
+
+
+Package natbib Warning: Citation `ARP:Loy:1974' on page 1 undefined on input li
+ne 118.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.116 
-       [1
+l.120 T
+       his template uses BibTeX to manage and format citations.  BibTeX is
+[1
 
 
- <./figures/graph.png>]
-
-Package natbib Warning: Citation `CT:Weiner:1999' on page 2 undefined on input 
-line 127.
-
-
-Package natbib Warning: Citation `CT:Phillips:1985' on page 2 undefined on inpu
-t line 128.
-
-
-Package natbib Warning: Citation `ARP:Loy:1974' on page 2 undefined on input li
-ne 128.
-
+]
 
 Package natbib Warning: Citation `CT:Gould:1988' on page 2 undefined on input l
-ine 133.
+ine 123.
 
 
 Package natbib Warning: Citation `ARP:Melinger:1991' on page 2 undefined on inp
-ut line 136.
+ut line 126.
 
 ) (./chapter2.texpdfTeX warning (ext4): destination with the same identifier (n
 ame{page.2}) has been already used, duplicate ignored
@@ -537,19 +533,26 @@ ame{page.2}) has been already used, duplicate ignored
 l.5 \cleardoublepage
                      [2]
 Chapter 2.
-) (./chapter3.tex [3
+<figures/section_view_motorlab_assembly.png, id=145, 401.5pt x 250.9375pt>
+File: figures/section_view_motorlab_assembly.png Graphic file (type png)
+
+<use figures/section_view_motorlab_assembly.png>
+Package pdftex.def Info: figures/section_view_motorlab_assembly.png used on inp
+ut line 31.
+(pdftex.def)             Requested size: 462.5791pt x 289.07999pt.
+ [3
 
 
-]
+]) (./chapter3.tex [4 <./figures/section_view_motorlab_assembly.png>]
 Chapter 3.
-) [4
+) [5
 
 
 ]
 No file etdrtemplate.bbl.
 (./appendixA.tex
 Appendix A.
-) (./appendixB.tex [5
+) (./appendixB.tex [6
 
 
 
@@ -560,7 +563,7 @@ Appendix B.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-[6
+[7
 
 
 ]
@@ -568,40 +571,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
  (./etdrtemplate.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
+(rerunfilecheck)             Checksum: 50C42005216F3AD16F1CE632B8F67BF1;1062.
 
 
-Package rerunfilecheck Warning: File `etdrtemplate.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `etdrtemplate.out':
-(rerunfilecheck)             Before: 4523E85DE6C141ECDE6529C5228B4DDE;1059
-(rerunfilecheck)             After:  3496AB53C0C1EB221C6D38A3BDC60219;968.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 7243 strings out of 493014
- 104070 string characters out of 6133351
- 197846 words of memory out of 5000000
- 10624 multiletter control sequences out of 15000+600000
- 11076 words of font info for 43 fonts, out of 8000000 for 9000
+ 7248 strings out of 493014
+ 104292 string characters out of 6133351
+ 197891 words of memory out of 5000000
+ 10627 multiletter control sequences out of 15000+600000
+ 11383 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,8n,32p,873b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.7} has been referenced but does not exis
+pdfTeX warning (dest): name{figure.1.1} has been referenced but does not exis
 t, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.6} has been referenced but does not exist,
- replaced by a fixed one
 
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on etdrtemplate.pdf (13 pages, 89571 bytes).
+Output written on etdrtemplate.pdf (14 pages, 444827 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
