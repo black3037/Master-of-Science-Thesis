@@ -80,6 +80,7 @@
 \usepackage{setspace} % Controls line spacing
 \usepackage[margin=1in]{geometry} % Sets page margins to 1 inch on all sides
 \usepackage[titles]{tocloft} % Adds leader dots to all entries in the table of contents
+\usepackage{acronym} % Package for acronyms
 
 % +--------------------------------------------------------------------+
 % |
@@ -240,6 +241,16 @@
 \tableofcontents
 \listoffigures
 \listoftables
+
+
+% +--------------------------------------------------------------------+
+% | Acronyms Page
+% +--------------------------------------------------------------------+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acronyms}
+\input{acronyms.tex}
 
 % +--------------------------------------------------------------------+
 % | Acknowledgements Page
