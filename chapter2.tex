@@ -9,7 +9,7 @@
 % | LaTeX will automatically number the chapters.                      
 % +--------------------------------------------------------------------+
 
-\chapter{Background}
+\chapter{Apparatus}
 \label{makereference2}
 
 Two pieces of apparatus were used to conduct the experiments in this thesis. This chapter will detail the purpose, design and recreation of the equipment. Section ~\ref{makereference2.1} will cover the new Motorlab, including the hardware implementation, design of components, and basic functionality. Section ~\ref{makereference2.1.1} will detail how a new type of position sensor works that is used for the position measurements of the Motorlab. Then, the older Motorlab will be discussed and compared to the new Motorlab in section ~\ref{makereference2.2}.
@@ -17,11 +17,15 @@ Two pieces of apparatus were used to conduct the experiments in this thesis. Thi
 \section{New Motorlab}
 \label{makereference2.1} 
 
-The new Motorlab is a reimplementation of older laboratory hardware created by Dr. Schinstock and Dr. White for Control of Mechanical Systems I at Kansas State University. The Motorlab allows users to connect the theoretical ideas of control theory with those in practice. 
+The new Motorlab is a reimplementation of older laboratory hardware created by Dr. Schinstock and Dr. White for Control of Mechanical Systems I at Kansas State University. The Motorlab allows users to connect the theoretical ideas of control theory with those in practice. (Maybe include applications of the motorlab and its use in the laboratory).
 
+\subsection{Hardware}
+\label{makereference2.1.1} 
+
+The new Motorlab consists of several key pieces of hardware, namely a \ac{MPU}, motor driver, and a \ac{BLDC} motor. The main MPU of the Motorlab is the STM32 Nucleo, which allows Arduino attachment shields and other STM boards to be attached for added functionality. For the purposes of the Motorlab, a motor driver was required to drive a brushless DC motor, namely a [Motor Brand]. An X-Nucleo-IHM07M1 (a three-phase brushless DC motor driver) was selected to be the primary driver for the Motorlab.
 
 \subsection{Position Sensor}
-\label{makereference2.1.1} 
+\label{makereference2.1.2} 
 
 
 The encoder that is being used on the Motorlab consists of 14-bit on-axis magnetic rotary position sensor chip, specifically the AS5047D by AMS. The position sensor chip provides high resolution absolute angle measurements (roughly 2000 steps per revolution) through a full 360 degree range. In addition to the fast absolute angle measurement system that the position sensor provides, it also has \ac{DAEC} that provides position control systems with near 0 latency \citep{1}.  
@@ -51,7 +55,7 @@ The AS5047D chip is a magnetic sensor that utilizes the Hall-effect. The chip wo
 \end{figure}
 
 
-\section{Old Motorlab}
+\section{Motorlab}
 \label{makereference2.2} 
 
 Need information here

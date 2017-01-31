@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 JAN 2017 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 JAN 2017 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,7 +364,11 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 132.
 Package hyperref Warning: Option `pdfpagelabels' has already been used,
 (hyperref)                setting the option has no effect on input line 132.
 
-(./etdrtemplate.aux)
+(./etdrtemplate.aux
+
+LaTeX Warning: Label `makereference2.1.2' multiply defined.
+
+)
 \openout1 = `etdrtemplate.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -381,8 +385,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
 LaTeX Font Info:    ... okay on input line 139.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
 LaTeX Font Info:    ... okay on input line 139.
-
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen126
@@ -530,45 +533,51 @@ l.5 \cleardoublepage
 l.5 \cleardoublepage
                      [2]
 Chapter 2.
-Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
+Package acronym Info: Label `acro:MPU' newly defined as it shall be overridden
+although it is yet undefined on input line 25.
+Package acronym Info: Label `acro:BLDC' newly defined as it shall be overridden
 
-although it is yet undefined on input line 27.
+although it is yet undefined on input line 25.
 [3
 
 
-] <figures/magnetic_field.png, id=165, 505.89pt x 631.35875pt>
+]
+Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
+
+although it is yet undefined on input line 31.
+ <figures/magnetic_field.png, id=176, 505.89pt x 631.35875pt>
 File: figures/magnetic_field.png Graphic file (type png)
 
 <use figures/magnetic_field.png>
-Package pdftex.def Info: figures/magnetic_field.png used on input line 33.
+Package pdftex.def Info: figures/magnetic_field.png used on input line 37.
 (pdftex.def)             Requested size: 231.63152pt x 289.07999pt.
 
-<figures/section_view_motorlab_assembly.png, id=167, 401.5pt x 250.9375pt>
+<figures/section_view_motorlab_assembly.png, id=178, 401.5pt x 250.9375pt>
 File: figures/section_view_motorlab_assembly.png Graphic file (type png)
 
 <use figures/section_view_motorlab_assembly.png>
 Package pdftex.def Info: figures/section_view_motorlab_assembly.png used on inp
-ut line 46.
+ut line 50.
 (pdftex.def)             Requested size: 462.5791pt x 289.07999pt.
-) (./chapter3.tex [4 <./figures/magnetic_field.png>] [5 <./figures/section_view
-_motorlab_assembly.png>]
+) (./chapter3.tex [4] [5 <./figures/magnetic_field.png>] [6 <./figures/section_
+view_motorlab_assembly.png>]
 Chapter 3.
-) [6
+) [7
 
 
-] (./etdrtemplate.bbl) (./appendixA.tex [7
+] (./etdrtemplate.bbl) (./appendixA.tex [8
 
 
 ]
 Appendix A.
-) (./appendixB.tex [8
+) (./appendixB.tex [9
 
 
 ]
 Appendix B.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
- [9
+ [10
 
 
 ]
@@ -577,18 +586,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 2278A1A891D863EFBD00FDAD20CA7CC2;1111.
+(rerunfilecheck)             Checksum: CD86F03F7F93AE98ECE60ACAD8B89287;1168.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
- 7727 strings out of 493014
- 111068 string characters out of 6133351
- 208979 words of memory out of 5000000
- 11078 multiletter control sequences out of 15000+600000
+ 7744 strings out of 493014
+ 111226 string characters out of 6133351
+ 209146 words of memory out of 5000000
+ 11089 multiletter control sequences out of 15000+600000
  11074 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,8n,32p,873b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -596,10 +608,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on etdrtemplate.pdf (17 pages, 536738 bytes).
+Output written on etdrtemplate.pdf (18 pages, 538480 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 249 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
