@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 FEB 2017 21:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 FEB 2017 22:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -368,6 +368,9 @@ Package hyperref Warning: Option `pdfpagelabels' has already been used,
 
 LaTeX Warning: Label `makereference2.1.2' multiply defined.
 
+
+LaTeX Warning: Label `makereference2.1.4' multiply defined.
+
 )
 \openout1 = `etdrtemplate.aux'.
 
@@ -499,21 +502,21 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [4
 
-]
+] [5]
 (./etdrtemplate.lof)
 \tf@lof=\write6
 \openout6 = `etdrtemplate.lof'.
 
- [5
+ [6
 
 ] (./etdrtemplate.lot)
 \tf@lot=\write7
 \openout7 = `etdrtemplate.lot'.
 
- [6
+ [7
 
 ] (./acronyms.tex)
-(./acknowledge.tex [7]) [8] (./chapter1.tex
+(./acknowledge.tex [8]) [9] (./chapter1.tex
 Chapter 1.
 ) (./chapter2.texpdfTeX warning (ext4): destination with the same identifier (n
 ame{page.1}) has been already used, duplicate ignored
@@ -542,14 +545,14 @@ l.26
 Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 32.
- [3] <figures/magnetic_field.png, id=178, 505.89pt x 631.35875pt>
+ [3] <figures/magnetic_field.png, id=194, 505.89pt x 631.35875pt>
 File: figures/magnetic_field.png Graphic file (type png)
 
 <use figures/magnetic_field.png>
 Package pdftex.def Info: figures/magnetic_field.png used on input line 38.
 (pdftex.def)             Requested size: 231.63152pt x 289.07999pt.
  [4 <./figures/magnetic_field.png>]
-<figures/section_view_motorlab_assembly.png, id=192, 401.5pt x 250.9375pt>
+<figures/section_view_motorlab_assembly.png, id=209, 401.5pt x 250.9375pt>
 File: figures/section_view_motorlab_assembly.png Graphic file (type png)
 
 <use figures/section_view_motorlab_assembly.png>
@@ -585,15 +588,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
  (./etdrtemplate.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
+Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
+(rerunfilecheck)             Checksum: A2EBEF64E9B1488D9463456BB4E7CABC;1198.
 
-
-Package rerunfilecheck Warning: File `etdrtemplate.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `etdrtemplate.out':
-(rerunfilecheck)             Before: A0CD8DE6C53884A3BB3A2D83B26D3721;1065
-(rerunfilecheck)             After:  6DC883A265A589F9D26AAF39C1ED1ABD;1131.
 
 LaTeX Warning: There were undefined references.
 
@@ -603,10 +600,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
- 7767 strings out of 493014
- 111469 string characters out of 6133351
- 208984 words of memory out of 5000000
- 11103 multiletter control sequences out of 15000+600000
+ 7774 strings out of 493014
+ 111553 string characters out of 6133351
+ 210123 words of memory out of 5000000
+ 11107 multiletter control sequences out of 15000+600000
  13091 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,8n,32p,1160b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -617,10 +614,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on etdrtemplate.pdf (18 pages, 575560 bytes).
+Output written on etdrtemplate.pdf (19 pages, 578346 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,7 +22,7 @@ The new Motorlab is a reimplementation of older laboratory hardware created by D
 \subsection{Hardware}
 \label{makereference2.1.1} 
 
-The new Motorlab consists of several key pieces of hardware, namely a \ac{MPU}, motor driver, and a \ac{BLDC} motor. The main MPU of the Motorlab is the STM32 Nucleo, which allows Arduino attachment shields and other STM boards to be attached for added functionality. For the purposes of the Motorlab, a motor driver was required to drive a brushless DC motor, namely a [Motor Brand]. An X-Nucleo-IHM07M1 (a three-phase brushless DC motor driver) was selected to be the primary driver for the Motorlab.
+The new Motorlab consists of several key pieces of hardware, namely a \ac{MPU}, motor driver, and a \ac{BLDC} motor. The main MPU of the Motorlab is the STM32 Nucleo, which allows Arduino attachment shields and other STM boards to be attached for added functionality. For the purposes of the Motorlab, a motor driver was required to drive a brushless DC motor, namely a RCTIMER GBM2804. An X-Nucleo-IHM07M1 (a three-phase brushless DC motor driver) was selected to be the primary driver for the Motorlab.
 
 \subsection{Position Sensor}
 \label{makereference2.1.2} 
@@ -59,12 +59,55 @@ Because of variability in resolution of current 3D printers, care was given to t
     \label{section_view_motorlab}
 \end{figure}
 
+\subsection{Motorlab Cost}
+\label{makereference2.1.4} 
+
+Text here.
+
+% Table of motor lab costs
+\begin{table}[ht]
+\begin{center}
+\caption{Motorlab expenditure report}
+\begin{tabular}[c]{|c|c|c|}
+
+\hline
+\textbf{Component} & \textbf{Brand/Manufacture} & \textbf{Cost} \\
+
+\hline
+BLDC Motor 1 & RCTIMER GBM2804 & 11.94 USD\\
+
+\hline
+Position Sensor & AS5047D AMS & 4.21 USD\\
+
+\hline
+ST32 Nucleo & STMicroelectronics & 10.12 USD\\
+
+\hline
+X-Nucleo-IHM07M1 & STMicroelectronics & 9.80 USD\\
+
+\hline
+Magnet & Unknown & 3.00 USD\\
+
+\hline
+Printed Circuit Board & Eric Patterson & -- USD\\
+
+\hline
+& \textbf{TOTAL COST} & \textbf{39.07 USD}\\
+\hline
+\end{tabular}
+
+\label{table1}
+\end{center}
+\end{table}
+
+% end of table
+
 \subsection{Motorlab GUI}
-\label{makereference2.1.3} 
+\label{makereference2.1.4} 
 
 \section{Motorlab}
 \label{makereference2.2} 
 
-The Motorlab is a piece of laboratory equipment developed by Dr. Dale Schinstock and Dr. Warren N. White at Kansas State University. It has been in service at the university for over 15 years, and as a result is a time-tested piece of laboratory hardware that has proven to be reliable in terms of providing quality practical control theory application to students enrolled in the class Control of Mechanical Systems I. Because the Motorlab's hardware components were designed and created to insure a very clear translation of laboratory results, in addition to the Motorlab having a much larger operating limit and bandwidth than students use in laboratory practice, this corresponds to a good base model to compare results and the apparatus used in this thesis too.
+The Motorlab is a piece of laboratory equipment developed by Dr. Dale Schinstock and Dr. Warren N. White at Kansas State University. It has been in service at the university for over 15 years, and as a result is a time-tested piece of laboratory hardware that has proven to be reliable in terms of providing quality practical control theory application to students enrolled in the class Control of Mechanical Systems I. Because the Motorlab's hardware components were designed and created to insure a very clear translation of laboratory results, in addition to the Motorlab having a much larger operating limit and bandwidth than students use in laboratory practice, this represents to a good base model to compare the results of the apparatus in this thesis too.
 
 Various hardware make up the Motorlab, namely, a high quality BLDC motor, BLDC servo amplifier by Copley Controls Corp., and a ST Discovery board \footnote{STMicroelectronics is a Switzerland based micro-controller manufacturer}. Typically the Motorlabs run a cost of about 700 USD per lab station \citep{4}.
