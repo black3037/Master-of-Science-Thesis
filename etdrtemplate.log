@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 FEB 2017 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 FEB 2017 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -545,42 +545,52 @@ l.26
 Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 32.
- [3] <figures/magnetic_field.png, id=194, 505.89pt x 631.35875pt>
+ [3] <figures/magnetic_field.png, id=196, 505.89pt x 631.35875pt>
 File: figures/magnetic_field.png Graphic file (type png)
 
 <use figures/magnetic_field.png>
 Package pdftex.def Info: figures/magnetic_field.png used on input line 38.
 (pdftex.def)             Requested size: 231.63152pt x 289.07999pt.
  [4 <./figures/magnetic_field.png>]
-<figures/section_view_motorlab_assembly.png, id=209, 401.5pt x 250.9375pt>
+<figures/section_view_motorlab_assembly.png, id=212, 401.5pt x 250.9375pt>
 File: figures/section_view_motorlab_assembly.png Graphic file (type png)
 
 <use figures/section_view_motorlab_assembly.png>
 Package pdftex.def Info: figures/section_view_motorlab_assembly.png used on inp
 ut line 55.
 (pdftex.def)             Requested size: 462.5791pt x 289.07999pt.
- [5 <./figures/section_view_motorlab_assembly.png>]) (./chapter3.tex [6]
+ [5 <./figures/section_view_motorlab_assembly.png>]
+<figures/old_motorlab_gui.png, id=218, 919.435pt x 726.715pt>
+File: figures/old_motorlab_gui.png Graphic file (type png)
+
+<use figures/old_motorlab_gui.png>
+Package pdftex.def Info: figures/old_motorlab_gui.png used on input line 109.
+(pdftex.def)             Requested size: 365.74724pt x 289.07999pt.
+Package acronym Info: Label `acro:GUI' newly defined as it shall be overridden
+although it is yet undefined on input line 117.
+ [6 <./figures/old_motorlab_gui.png>])
+(./chapter3.tex [7]
 Chapter 3.
 
-LaTeX Warning: Reference `makereference1.3' on page 7 undefined on input line 1
+LaTeX Warning: Reference `makereference1.3' on page 8 undefined on input line 1
 8.
 
-) [7
+) [8
 
 
-] (./etdrtemplate.bbl) (./appendixA.tex [8
+] (./etdrtemplate.bbl) (./appendixA.tex [9
 
 
 ]
 Appendix A.
-) (./appendixB.tex [9
+) (./appendixB.tex [10
 
 
 ]
 Appendix B.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
- [10
+ [11
 
 
 ]
@@ -589,7 +599,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
-(rerunfilecheck)             Checksum: A2EBEF64E9B1488D9463456BB4E7CABC;1198.
+(rerunfilecheck)             Checksum: A2642B585B081B823BB4CA4BCAA7F5FA;1199.
 
 
 LaTeX Warning: There were undefined references.
@@ -600,10 +610,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
- 7774 strings out of 493014
- 111553 string characters out of 6133351
- 210123 words of memory out of 5000000
- 11107 multiletter control sequences out of 15000+600000
+ 7789 strings out of 493014
+ 111828 string characters out of 6133351
+ 209212 words of memory out of 5000000
+ 11117 multiletter control sequences out of 15000+600000
  13091 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,8n,32p,1160b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -614,10 +624,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on etdrtemplate.pdf (19 pages, 578346 bytes).
+Output written on etdrtemplate.pdf (20 pages, 770187 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
