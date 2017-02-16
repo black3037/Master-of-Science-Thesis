@@ -9,13 +9,60 @@
 % | LaTeX will automatically number the chapters.                      
 % +--------------------------------------------------------------------+
 
-\chapter{This is Chapter 3}
-\label{makereference3}
+\chapter{Model Development}
+\label{chp3}
 
-Here are more examples of references to previous sections.  In
-Chapter~\ref{makereference1} there were several sections, including
-section~\ref{makereference1.1}, section~\ref{makereference1.2}, and
-section~\ref{makereference1.3}.
+Chapter \ref{chp3} will be dedicated to developing the various parameters that make up the NERMLAB such as the motor torque constant, \ac{back-emf}, inductance, and max voltage. Each section in Chapter \ref{chp3} will detail the process of how the various parameters were measured, calculated, and experimentally determined. Nomenclature for various constants and parameters are detailed in the table \ref{table2}.
 
-Likewise, in Chapter~\ref{makereference2}, there are
-sections~\ref{makereference2.1} and ~\ref{makereference2.2}.
+% Table of motor lab constants
+\begin{table}[ht]
+\begin{center}
+\caption{Motor parameters}
+\begin{tabular}[c]{|c|c|}
+
+\hline
+\textbf{Parameter} & \textbf{Description}\\
+
+\hline
+V & Motor Voltage\\
+
+\hline
+\(k_t\) & Motor Torque Constant\\
+
+\hline
+\(K_E\) & Back Electromotive Force Constant\\
+
+\hline
+J & Mass Moment of Inertia\\
+
+\hline
+L & Motor Inductance\\
+
+\hline
+R & Motor Resistance\\
+
+\hline
+\(\tau\) & Time Constant\\
+
+\hline
+\end{tabular}
+
+\label{table2}
+\end{center}
+\end{table}
+
+% end of table
+
+\section{Motor Resistance}
+
+\section{Motor Torque Constant and Back EMF}
+In order to determine the Motor Torque Constant (\(k_t\)), the back-emf needs to be determined in order to make an appropriate estimate for \(k_t\). Detail experiment here.
+
+\[K_E = \frac{V}{\omega_m}\]
+
+
+\section{Mass Moment of Inertia (\(J\)) Estimation}
+
+\section{Motor Inductance}
+
+\[L = R\tau\]

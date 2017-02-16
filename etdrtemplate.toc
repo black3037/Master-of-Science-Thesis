@@ -13,7 +13,10 @@
 \contentsline {subsection}{\numberline {2.1.4}Motorlab Cost}{5}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Motorlab GUI}{6}{subsection.2.1.5}
 \contentsline {section}{\numberline {2.2}Motorlab}{7}{section.2.2}
-\contentsline {chapter}{\numberline {3}This is Chapter 3}{8}{chapter.3}
-\contentsline {chapter}{Bibliography}{9}{section*.10}
-\contentsline {chapter}{\numberline {A}Title for This Appendix}{10}{appendix.A}
-\contentsline {chapter}{\numberline {B}Title for This Appendix}{11}{appendix.B}
+\contentsline {chapter}{\numberline {3}Model Development}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Motor Torque Constant and Back EMF}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mass Moment of Inertia (\(J\)) Estimation}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Inductance}{9}{section.3.3}
+\contentsline {chapter}{Bibliography}{10}{section*.11}
+\contentsline {chapter}{\numberline {A}Title for This Appendix}{11}{appendix.A}
+\contentsline {chapter}{\numberline {B}Title for This Appendix}{12}{appendix.B}

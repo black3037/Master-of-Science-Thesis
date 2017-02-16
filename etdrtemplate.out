@@ -15,7 +15,10 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{Motorlab Cost}{section.2.1}% 15
 \BOOKMARK [2][-]{subsection.2.1.5}{Motorlab GUI}{section.2.1}% 16
 \BOOKMARK [1][-]{section.2.2}{Motorlab}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{This is Chapter 3}{}% 18
-\BOOKMARK [0][-]{section*.10}{Bibliography}{}% 19
-\BOOKMARK [0][-]{appendix.A}{Title for This Appendix}{}% 20
-\BOOKMARK [0][-]{appendix.B}{Title for This Appendix}{}% 21
+\BOOKMARK [0][-]{chapter.3}{Model Development}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Motor Torque Constant and Back EMF}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Mass Moment of Inertia \(J\) Estimation}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Inductance}{chapter.3}% 21
+\BOOKMARK [0][-]{section*.11}{Bibliography}{}% 22
+\BOOKMARK [0][-]{appendix.A}{Title for This Appendix}{}% 23
+\BOOKMARK [0][-]{appendix.B}{Title for This Appendix}{}% 24
