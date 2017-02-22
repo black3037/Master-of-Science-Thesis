@@ -14,4 +14,8 @@ AMS, {\em AS5047D 14-Bit On-Axis Magnetic Rotary Position Sensor with 11-Bit
 S.~R. Smith, ``Demonstrating introductory control systems concepts on
   inexpensive hardware,'' Master's thesis, Kansas State University, 2017.
 
+\bibitem{5}
+J.~R. Mevey, ``Sensorless field oriented control of brushless permanent magnet
+  synchronous motors,'' Master's thesis, Kansas State University, 2009.
+
 \end{thebibliography}
