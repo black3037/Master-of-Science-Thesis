@@ -15,12 +15,12 @@
 \contentsline {section}{\numberline {2.2}Motorlab}{7}{section.2.2}
 \contentsline {chapter}{\numberline {3}Model Development}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motor Resistance}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Motor Torque Constant and Back EMF}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Procedure and Results}{9}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Mass Moment of Inertia Estimation}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Software Modeling of Mass Moment of Inertia}{11}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Mathematical Approximation of Mass Moment of Inertia}{11}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Motor Inductance}{12}{section.3.4}
-\contentsline {chapter}{Bibliography}{13}{section*.11}
-\contentsline {chapter}{\numberline {A}Title for This Appendix}{14}{appendix.A}
-\contentsline {chapter}{\numberline {B}Title for This Appendix}{15}{appendix.B}
+\contentsline {section}{\numberline {3.2}Motor Torque Constant and Back EMF}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Procedure and Results}{10}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Mass Moment of Inertia Estimation}{12}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Software Modeling of Mass Moment of Inertia}{12}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Mathematical Approximation of Mass Moment of Inertia}{12}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Motor Inductance}{13}{section.3.4}
+\contentsline {chapter}{Bibliography}{14}{section*.11}
+\contentsline {chapter}{\numberline {A}Title for This Appendix}{15}{appendix.A}
+\contentsline {chapter}{\numberline {B}Title for This Appendix}{16}{appendix.B}

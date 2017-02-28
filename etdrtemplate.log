@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 FEB 2017 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 FEB 2017 22:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -646,6 +646,9 @@ LaTeX Warning: Label `makereference2.1.2' multiply defined.
 
 LaTeX Warning: Label `makereference2.1.4' multiply defined.
 
+
+LaTeX Warning: Label `table3' multiply defined.
+
 )
 \openout1 = `etdrtemplate.aux'.
 
@@ -822,14 +825,14 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 32.
- [3] <figures/magnetic_field.png, id=245, 505.89pt x 631.35875pt>
+ [3] <figures/magnetic_field.png, id=249, 505.89pt x 631.35875pt>
 File: figures/magnetic_field.png Graphic file (type png)
 
 <use figures/magnetic_field.png>
 Package pdftex.def Info: figures/magnetic_field.png used on input line 38.
 (pdftex.def)             Requested size: 231.63152pt x 289.07999pt.
  [4 <./figures/magnetic_field.png>]
-<figures/section_view_motorlab_assembly.png, id=261, 401.5pt x 250.9375pt>
+<figures/section_view_motorlab_assembly.png, id=265, 401.5pt x 250.9375pt>
 File: figures/section_view_motorlab_assembly.png Graphic file (type png)
 
 <use figures/section_view_motorlab_assembly.png>
@@ -837,7 +840,7 @@ Package pdftex.def Info: figures/section_view_motorlab_assembly.png used on inp
 ut line 55.
 (pdftex.def)             Requested size: 462.5791pt x 289.07999pt.
  [5 <./figures/section_view_motorlab_assembly.png>]
-<figures/old_motorlab_gui.png, id=267, 919.435pt x 726.715pt>
+<figures/old_motorlab_gui.png, id=271, 919.435pt x 726.715pt>
 File: figures/old_motorlab_gui.png Graphic file (type png)
 
 <use figures/old_motorlab_gui.png>
@@ -860,37 +863,43 @@ i-ous pa-ram-e-ters that make up the NERMLAB
 [8
 
 
-] [9]
-Overfull \hbox (0.77322pt too wide) in paragraph at lines 88--110
+] <figures/motor_winding.png, id=302, 411.5375pt x 167.62625pt>
+File: figures/motor_winding.png Graphic file (type png)
+
+<use figures/motor_winding.png>
+Package pdftex.def Info: figures/motor_winding.png used on input line 101.
+(pdftex.def)             Requested size: 177.42863pt x 72.26999pt.
+ [9 <./figures/motor_winding.png>]
+Overfull \hbox (0.77322pt too wide) in paragraph at lines 128--150
  [] 
  []
 
-<figures/back_emf_plot.png, id=314, 578.16pt x 433.62pt>
+[10] <figures/back_emf_plot.png, id=331, 578.16pt x 433.62pt>
 File: figures/back_emf_plot.png Graphic file (type png)
 
 <use figures/back_emf_plot.png>
-Package pdftex.def Info: figures/back_emf_plot.png used on input line 128.
+Package pdftex.def Info: figures/back_emf_plot.png used on input line 168.
 (pdftex.def)             Requested size: 366.18356pt x 274.6262pt.
- [10] [11 <./figures/back_emf_plot.png>]
-<figures/thick_walled_cylinder.png, id=332, 185.69376pt x 210.7875pt>
+ [11] [12 <./figures/back_emf_plot.png>]
+<figures/thick_walled_cylinder.png, id=347, 185.69376pt x 210.7875pt>
 File: figures/thick_walled_cylinder.png Graphic file (type png)
 
 <use figures/thick_walled_cylinder.png>
 Package pdftex.def Info: figures/thick_walled_cylinder.png used on input line 1
-57.
+97.
 (pdftex.def)             Requested size: 95.50159pt x 108.405pt.
-) [12 <./figures/thick_walled_cylinder.png>] (./etdrtemplate.bbl) (./appendixA.
-tex [13
+) [13 <./figures/thick_walled_cylinder.png>] (./etdrtemplate.bbl) (./appendixA.
+tex [14
 
 
 ]
 Appendix A.
-) (./appendixB.tex [14
+) (./appendixB.tex [15
 
 
 ]
 Appendix B.
-) [15
+) [16
 
 
 ]
@@ -907,10 +916,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17225 strings out of 493014
- 311208 string characters out of 6133351
- 389872 words of memory out of 5000000
- 20323 multiletter control sequences out of 15000+600000
+ 17237 strings out of 493014
+ 311437 string characters out of 6133351
+ 389930 words of memory out of 5000000
+ 20329 multiletter control sequences out of 15000+600000
  18522 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,10n,73p,1160b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -929,10 +938,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on etdrtemplate.pdf (24 pages, 883809 bytes).
+Output written on etdrtemplate.pdf (25 pages, 890827 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 262 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
