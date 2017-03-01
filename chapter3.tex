@@ -45,7 +45,10 @@ J & Mass Moment of Inertia\\
 L & Motor Inductance\\
 
 \hline
-R & Motor Resistance\\
+R & Motor Phase Resistance\\
+
+\hline
+\(R_{LL}\) & Motor Line-Line Resistance\\
 
 \hline
 \(\tau\) & Time Constant\\
@@ -65,59 +68,68 @@ T & Motor Torque\\
 % end of table
 
 \section{Motor Resistance}
-BLDC motors are typically connected in two configurations, WYE (star) and a delta connection (Figure \ref{motor_configuration}), however the delta connection is more rare for motors. The RCTIMER GBM2804 utilizes the WYE configuration and will be analyzed as such. Typically the neutral connection is unavailable for measurement on most motors, so motors have to be measured line-line. However for motor control it's the phase values that are of importance and not the line-line values. Because of this fact the line-line values need to be converted to phase values, however for the case of the BLDC motor it is simply dividing the line-line value by two. As a result the motor resistance for the RCTIMER GBM2804 can be calculated using equation \ref{eq:3.3}.
 
-\begin{equation}
+\begin{figure}[H]%t=top, b=bottom, h=here
+	\begin{center}
+		\includegraphics[height=1in]{figures/motor_winding.png}
+		
+		\caption[Motor Connection Configuration]{Motor Connection Configuration}
+		
+		\label{motor_configuration}
+	\end{center}
+\end{figure}
+
+BLDC motors are typically connected in two wiring configurations, WYE (Y) or delta (\(\Delta \)) which can be seen in figure \ref{motor_configuration}. The RCTIMER GBM2804 utilizes the WYE (Y) configuration and will be analyzed as such. Due to the wiring of WYE systems, the neutral connection is typically unavailable for measurement on most motors. As a result it is common to measure resistance by a line-line reading. However in terms of motor control it is the phase resistance and not the line-line resistance that is of importance. Converting between the phase and line-line resistance is quite simple and can be done by dividing the line-line resistance by two (equation \ref{eq:3.1}).
+
+\begin{equation} \label{eq:3.1}
 R = \frac{R_{LL}}{2}
 \end{equation}
 
-In order to gather a good estimate for the resistance value of the RCTIMER GBM2804 motor, the resistance was measured line-line across all 3 phases with different configurations, then an average was taken to find the final motor resistance.
+\subsection{Procedure and Results}
+
+In order to gather a good estimate for the phase resistance of the RCTIMER GBM2804 motor, the resistance was measured line-line across all 3 phases. Each set of motor leads were hooked up to a digital multimeter and the values were tabulated for each phase component in table \ref{table3}. An average was then calculated between the different line-line resistances to get the overall resistance of the motor.
 
 \begin{table}[ht]
-\begin{center}
-\caption{Measured motor resistance}
-\begin{tabular}[c]{|c|c|c|}
+	\begin{center}
+		\caption{Measured motor resistance}
+		\begin{tabular}[c]{|c|c|c|}
+			
+			\hline
+			\textbf{A-B} & \textbf{A-C} & \textbf{B-C}\\
+			
+			\hline
+			9.870 \(\Omega\)  & 9.900  \(\Omega\) & 9.950 \(\Omega\) \\
+			
+			\hline
+			& Average: & 9.91 \(\Omega\) \\
+			
+			\hline
+			\end{tabular}
+			
+			\label{table3}
+			\end{center}
+			\end{table}
 
-\hline
-\textbf{A-B} & \textbf{A-C)} & \textbf{B-C}\\
+Using equation \ref{eq:3.1} it is then possible to find the overall phase resistance of the motor.
 
-\hline
- &  & \\
- 
- \hline
- &  & \\
-
-\hline
-\end{tabular}
-
-\label{table3}
-\end{center}
-\end{table}
-
-
-
-\begin{figure}[htb]%t=top, b=bottom, h=here
-\begin{center}
-    \includegraphics[height=1in]{figures/motor_winding.png}
-
-    \caption[Motor Connection Configuration]{WYE (Left) | Delta (Right)}
-
-    \label{motor_configuration}
-\end{center}
-\end{figure}
+\begin{tcolorbox}[standard jigsaw,
+	opacityback=0]
+	\[R = 4.955 \approx 5 \Omega \]
+	
+\end{tcolorbox}
 
 \section{Motor Torque Constant and Back EMF}
-The motor torque constant (\(k_t\)) is a common parameter used in BLDC motors. It relates the armature current to the torque produced by a motor: \(T = k_T i \). Many methods exist to determine the torque constant, including relating the motor velocity constant \(k_v\) which is inversely related to the torque constant by \(k_T = \frac{1}{k_v} \), or by measuring the line-line back-emf voltage per phase (\(K_e\)). \(K_e\) is the peak value of the back-emf per angular velocity measured from line-neutral. However since line-neutral is typically unavailable on most BLDC motors, the back-emf constant is often represented as a line measurement, \(K_{e,LL}\). The overall torque constant can then be related to the line measurement back-emf voltage for sinusoidal type outputs by equation \ref{eq:3.1} or for trapezoidal outputs by equation \ref{eq:3.2}. \citep{5}. 
+The motor torque constant (\(k_t\)) is a common parameter used in BLDC motors. It relates the armature current to the torque produced by a motor: \(T = k_T i \). Many methods exist to determine the torque constant, including relating the motor velocity constant \(k_v\) which is inversely related to the torque constant by \(k_T = \frac{1}{k_v} \), or by measuring the line-line back-emf voltage per phase (\(K_e\)). \(K_e\) is the peak value of the back-emf per angular velocity measured from line-neutral. However since line-neutral is typically unavailable on most BLDC motors, the back-emf constant is often represented as a line measurement, \(K_{e,LL}\). The overall torque constant can then be related to the line measurement back-emf voltage for sinusoidal type outputs by equation \ref{eq:3.2} or for trapezoidal outputs by equation \ref{eq:3.3}. \citep{5}. 
 
-\begin{equation} \label{eq:3.1}
+\begin{equation} \label{eq:3.2}
 k_T = \frac{\sqrt{3}}{2} K_{e,LL}
 \end{equation}
 
-\begin{equation} \label{eq:3.2}
+\begin{equation} \label{eq:3.3}
 k_T = K_{e,LL}
 \end{equation}
 
-Because \(K_{e,LL}\) can be experimentally determined, it is possible to find the overall motor torque constant for a BLDC motor. One simply needs to measure the line-line sinusoidal or trapezoidal back-emf voltage at various speeds to get a good estimate of \(K_{e,LL}\). With equation \ref{eq:3.1} or \ref{eq:3.2}, \(k_T\) can then be determined.
+Because \(K_{e,LL}\) can be experimentally determined, it is possible to find the overall motor torque constant for a BLDC motor. One simply needs to measure the line-line sinusoidal or trapezoidal back-emf voltage at various speeds to get a good estimate of \(K_{e,LL}\). With equation \ref{eq:3.2} or \ref{eq:3.3}, \(k_T\) can then be determined.
 
 \subsection{Procedure and Results}
 In order to calculate the back-emf of the RCTIMER GBM2804 BLDC motor an experiment had to be set up to measure the voltage generated by the motor. Three pieces of equipment were needed: an oscilloscope, the Motorlab, and a torque transmission shaft. The torque transmission shaft was a 3D printed part\footnote{See appendix | for part diagram} that allowed the Motorlab to spin the RCTIMER GBM2804 at a constant speed to generate a back voltage. A line-line voltage (peak-peak) was then read from the leads of the RCTIMER GBM2804 by an oscilloscope. The data collected is tabulated in table \ref{table3}.
@@ -154,26 +166,26 @@ In order to calculate the back-emf of the RCTIMER GBM2804 BLDC motor an experime
 
 There is a fairly linear relationship between the peak voltage and speed. Due to this fact \(K_{e,LL}\) can be approximated from the slope of \(\frac{V}{\omega_m}\). The normal equation from the least-squares method was employed to find the best fit for the data in table \ref{table3}. Two matrices were constructed from the data, namely \(\matrva{V}\) and \(\matrva{\omega_m}\).
 
-\begin{equation} \label{eq:3.3}
+\begin{equation} \label{eq:3.4}
 K_{e,LL} = (\matrva{\omega_m \omega_m^T})^{-1} \matrva{\omega_m V^T}
 \end{equation} 
 
-From equation \ref{eq:3.3}, the back-emf constant was found to be: 
+From equation \ref{eq:3.4}, the back-emf constant was found to be: 
 \[K_{e,LL} = 0.0713 \quad \frac{V \cdot s}{rad} \]
 
 To verify that \(K_{e,LL}\) was the best fit to that data, \(K_{e,LL}\) was plotted against the collected data in figure \ref{back_emf_plot}.
 
-\begin{figure}[htb]%t=top, b=bottom, h=here
-\begin{center}
-    \includegraphics[height=3.8in]{figures/back_emf_plot.png}
-
-    \caption[Measured Back EMF vs Speed]{Measured Back EMF vs Speed}
-
-    \label{back_emf_plot}
-\end{center}
+\begin{figure}[H]%t=top, b=bottom, h=here
+	\begin{center}
+		\includegraphics[height=3.8in]{figures/back_emf_plot.png}
+		
+		\caption[Measured Back EMF vs Speed]{Measured Back EMF vs Speed}
+		
+		\label{back_emf_plot}
+	\end{center}
 \end{figure}
 
-Since the relationship between \(k_T\) and \(K_{e,LL}\) is known by equation \ref{eq:3.1} and \ref{eq:3.2}, \(k_T\) can now be calculated.
+Since the relationship between \(k_T\) and \(K_{e,LL}\) is known by equation \ref{eq:3.2} and \ref{eq:3.3}, \(k_T\) can now be calculated.
 \begin{tcolorbox}[
     standard jigsaw,
     opacityback=0]
