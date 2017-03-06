@@ -27,6 +27,6 @@
 \contentsline {chapter}{\numberline {5}Experiment Two}{18}{chapter.5}
 \contentsline {chapter}{\numberline {6}Experiment Three}{19}{chapter.6}
 \contentsline {chapter}{\numberline {7}Experiment Four}{20}{chapter.7}
-\contentsline {chapter}{Bibliography}{21}{section*.11}
-\contentsline {chapter}{\numberline {A}Title for This Appendix}{22}{appendix.A}
-\contentsline {chapter}{\numberline {B}Title for This Appendix}{23}{appendix.B}
+\contentsline {chapter}{Bibliography}{21}{section*.24}
+\contentsline {chapter}{\numberline {A}Experiment Documentation}{22}{appendix.A}
+\contentsline {chapter}{\numberline {B}Part Drawings}{23}{appendix.B}
