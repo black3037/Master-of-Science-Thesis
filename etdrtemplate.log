@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.4)  6 MAR 2017 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.4)  7 MAR 2017 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,14 +1039,14 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 Package acronym Info: Label `acro:DAEC' newly defined as it shall be overridden
 
 although it is yet undefined on input line 32.
- [3] <figures/magnetic_field.png, id=293, 505.89pt x 631.35875pt>
+ [3] <figures/magnetic_field.png, id=297, 505.89pt x 631.35875pt>
 File: figures/magnetic_field.png Graphic file (type png)
 
 <use figures/magnetic_field.png>
 Package pdftex.def Info: figures/magnetic_field.png used on input line 38.
 (pdftex.def)             Requested size: 231.63152pt x 289.07999pt.
  [4 <./figures/magnetic_field.png>]
-<figures/section_view_motorlab_assembly.png, id=313, 401.5pt x 250.9375pt>
+<figures/section_view_motorlab_assembly.png, id=317, 401.5pt x 250.9375pt>
 File: figures/section_view_motorlab_assembly.png Graphic file (type png)
 
 <use figures/section_view_motorlab_assembly.png>
@@ -1054,7 +1054,7 @@ Package pdftex.def Info: figures/section_view_motorlab_assembly.png used on inp
 ut line 55.
 (pdftex.def)             Requested size: 462.5791pt x 289.07999pt.
  [5 <./figures/section_view_motorlab_assembly.png>]
-<figures/old_motorlab_gui.png, id=319, 919.435pt x 726.715pt>
+<figures/old_motorlab_gui.png, id=323, 919.435pt x 726.715pt>
 File: figures/old_motorlab_gui.png Graphic file (type png)
 
 <use figures/old_motorlab_gui.png>
@@ -1074,7 +1074,7 @@ Overfull \hbox (6.2248pt too wide) in paragraph at lines 15--16
 i-ous pa-ram-e-ters that make up the NERMLAB
  []
 
-<figures/motor_winding.png, id=340, 258.10715pt x 121.74054pt>
+<figures/motor_winding.png, id=344, 258.10715pt x 121.74054pt>
 File: figures/motor_winding.png Graphic file (type png)
 
 <use figures/motor_winding.png>
@@ -1088,14 +1088,14 @@ Overfull \hbox (0.77322pt too wide) in paragraph at lines 140--162
  [] 
  []
 
-<figures/back_emf_plot.png, id=383, 578.16pt x 433.62pt>
+<figures/back_emf_plot.png, id=387, 578.16pt x 433.62pt>
 File: figures/back_emf_plot.png Graphic file (type png)
 
 <use figures/back_emf_plot.png>
 Package pdftex.def Info: figures/back_emf_plot.png used on input line 180.
 (pdftex.def)             Requested size: 366.18356pt x 274.6262pt.
  [11] [12 <./figures/back_emf_plot.png>]
-<figures/thick_walled_cylinder.png, id=401, 185.69376pt x 210.7875pt>
+<figures/thick_walled_cylinder.png, id=405, 185.69376pt x 210.7875pt>
 File: figures/thick_walled_cylinder.png Graphic file (type png)
 
 <use figures/thick_walled_cylinder.png>
@@ -1114,6 +1114,35 @@ Overfull \hbox (12.03073pt too wide) in paragraph at lines 10--10
 
 ] [16]) (./chapter5.tex [17]
 Chapter 5.
+
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
+\pgfdecoratedcompleteddistance=\dimen187
+\pgfdecoratedremainingdistance=\dimen188
+\pgfdecoratedinputsegmentcompleteddistance=\dimen189
+\pgfdecoratedinputsegmentremainingdistance=\dimen190
+\pgf@decorate@distancetomove=\dimen191
+\pgf@decorate@repeatstate=\count160
+\pgfdecorationsegmentamplitude=\dimen192
+\pgfdecorationsegmentlength=\dimen193
+)
+\tikz@lib@dec@box=\box73
+)
+(c:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+Overfull \hbox (2.31522pt too wide) in paragraph at lines 65--65
+[][][][]$\OML/cmm/m/it/12 Mechanical 
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 67--67
+[][][][]$\OML/cmm/m/it/12 Low Pass 
+ []
+
 ) (./chapter6.tex [18
 
 
@@ -1132,35 +1161,35 @@ Chapter 7.
 
 ]
 Appendix A.
-<figures/appendix/TEK2.png, id=456, 602.25pt x 361.35pt>
+<figures/appendix/TEK2.png, id=465, 602.25pt x 361.35pt>
 File: figures/appendix/TEK2.png Graphic file (type png)
 
 <use figures/appendix/TEK2.png>
 Package pdftex.def Info: figures/appendix/TEK2.png used on input line 15.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK3.png, id=457, 602.25pt x 361.35pt>
+<figures/appendix/TEK3.png, id=466, 602.25pt x 361.35pt>
 File: figures/appendix/TEK3.png Graphic file (type png)
 
 <use figures/appendix/TEK3.png>
 Package pdftex.def Info: figures/appendix/TEK3.png used on input line 18.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK4.png, id=458, 602.25pt x 361.35pt>
+<figures/appendix/TEK4.png, id=467, 602.25pt x 361.35pt>
 File: figures/appendix/TEK4.png Graphic file (type png)
 
 <use figures/appendix/TEK4.png>
 Package pdftex.def Info: figures/appendix/TEK4.png used on input line 22.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK5.png, id=459, 602.25pt x 361.35pt>
+<figures/appendix/TEK5.png, id=468, 602.25pt x 361.35pt>
 File: figures/appendix/TEK5.png Graphic file (type png)
 
 <use figures/appendix/TEK5.png>
 Package pdftex.def Info: figures/appendix/TEK5.png used on input line 25.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK6.png, id=460, 602.25pt x 361.35pt>
+<figures/appendix/TEK6.png, id=469, 602.25pt x 361.35pt>
 File: figures/appendix/TEK6.png Graphic file (type png)
 
 <use figures/appendix/TEK6.png>
@@ -1172,7 +1201,7 @@ Package pdftex.def Info: figures/appendix/TEK6.png used on input line 30.
  <./figures/appendix/TEK2.png> <./figures/appendix/TEK3.png> <./figures/appendi
 x/TEK4.png> <./figures/appendix/TEK5.png> <./figures/appendix/TEK6.png>]
 Appendix B.
-<figures/drawings/standoff_drawing.png, id=476, 645.16031pt x 685.05937pt>
+<figures/drawings/standoff_drawing.png, id=485, 645.16031pt x 685.05937pt>
 File: figures/drawings/standoff_drawing.png Graphic file (type png)
 
 <use figures/drawings/standoff_drawing.png>
@@ -1185,7 +1214,7 @@ Overfull \hbox (6.68153pt too wide) in paragraph at lines 12--13
  []
 
 
-<figures/drawings/magnet_holder_drawing.png, id=477, 551.05875pt x 680.5425pt>
+<figures/drawings/magnet_holder_drawing.png, id=486, 551.05875pt x 680.5425pt>
 File: figures/drawings/magnet_holder_drawing.png Graphic file (type png)
 
 <use figures/drawings/magnet_holder_drawing.png>
@@ -1193,7 +1222,7 @@ Package pdftex.def Info: figures/drawings/magnet_holder_drawing.png used on inp
 ut line 22.
 (pdftex.def)             Requested size: 409.63535pt x 505.89pt.
 
-<figures/drawings/torque_transmission_shaft_drawing.png, id=478, 671.50874pt x 
+<figures/drawings/torque_transmission_shaft_drawing.png, id=487, 671.50874pt x 
 680.5425pt>
 File: figures/drawings/torque_transmission_shaft_drawing.png Graphic file (type
  png)
@@ -1219,20 +1248,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
 Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
-(rerunfilecheck)             Checksum: B88C9EDAE9845CFAF041E9B4A8273D72;2139.
+(rerunfilecheck)             Checksum: E87D640FC5839387B8F4F526EBBC1DD4;2139.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24294 strings out of 493013
- 475441 string characters out of 6137009
- 577250 words of memory out of 5000000
- 27207 multiletter control sequences out of 15000+600000
+ 24775 strings out of 493013
+ 491736 string characters out of 6137009
+ 577416 words of memory out of 5000000
+ 27672 multiletter control sequences out of 15000+600000
  20594 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,10n,73p,1191b,834s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,10n,73p,1191b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-di
@@ -1248,10 +1277,10 @@ nts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti12.pfb>
-Output written on etdrtemplate.pdf (35 pages, 1102584 bytes).
+Output written on etdrtemplate.pdf (35 pages, 1110133 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 128 named destinations out of 1000 (max. 500000)
  355 words of extra memory for PDF output out of 10000 (max. 10000000)
 

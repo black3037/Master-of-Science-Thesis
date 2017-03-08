@@ -12,16 +12,18 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Block Diagram of Closed Loop Control System}}{16}{figure.caption.22}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Block Diagram Reduction}}{17}{figure.caption.23}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram of Closed Loop Speed Control System}}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Block Diagram of Open Loop System (Speed Control)}}{18}{figure.caption.25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Back emf at various motor speeds\relax }}{22}{figure.caption.26}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Back emf at various motor speeds\relax }}{22}{figure.caption.28}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {300 RPM}}}{22}{subfigure.1.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {500 RPM}}}{22}{subfigure.1.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {1000 RPM}}}{22}{subfigure.1.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {1500 RPM}}}{22}{subfigure.1.4}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {2000 RPM}}}{22}{subfigure.1.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Standoff for NERMLAB}}{24}{figure.caption.27}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Magnet holder for NERMLAB}}{25}{figure.caption.28}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Torque Transmission Shaft for NERMLAB}}{26}{figure.caption.29}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Standoff for NERMLAB}}{24}{figure.caption.29}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Magnet holder for NERMLAB}}{25}{figure.caption.30}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Torque Transmission Shaft for NERMLAB}}{26}{figure.caption.31}

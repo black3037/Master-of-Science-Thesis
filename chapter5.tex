@@ -1,8 +1,75 @@
 %% Chapter 5
 
+% Set up block-diagram shapes
+% -------------------------------
+\tikzstyle{block} = [draw, rectangle, 
+minimum height=3em, minimum width=4em]
+\tikzstyle{block2} = [draw, rectangle, 
+minimum height=4em, minimum width=7em]
+\tikzstyle{sum} = [draw, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+% -------------------------------
+
 \cleardoublepage
 
 \chapter{Experiment Two}
 \label{chp5}
 
-Chapter \ref{chp5} will
+Chapter \ref{chp5} will cover the concept of 'high frequency dynamics'. High frequency dynamics in this context are the faster dynamics in comparison to the mechanical models in the Motorlab and NERMLAB systems. In experiment 2 the higher frequency or faster dynamics are a low pass filter on the output speed from the nominal plant\footnote{Nominal plant being the combination of the mechanical dynamics and derivative, as seen in figure \ref{SPEEDCSZOOM}}.
+
+% Block diagram 1
+% -------------------------------
+\begin{figure}[H]
+	\begin{center}
+		\caption[Block Diagram of Closed Loop Speed Control System]{Closed Loop Speed Control System}
+		\label{SPEEDCS}
+		
+		\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+		\node [input, name=input] {};
+		\node [sum, right of=input] (sum) {};
+		\node [block, right of=sum] (controller) {$G_c(s)$};
+		\node [block, right of=controller, node distance=3cm] (system) {$G_p(s)$};
+		\node [block, right of=system, node distance=3cm] (high_frequency) {$\frac{k_{dr}300^2s}{s^2 + 212s + 300^2}$};
+		
+		\draw [->] (controller) -- node[name=u] {$I(s)$} (system);
+		\node [output, right of=high_frequency] (output) {};
+		\coordinate [below of=u] (measurements) {};
+		
+		\draw [draw,->] (input) -- node {$\omega_c(s)$} (sum);
+		\draw [->] (sum) -- node {$E(s)$} (controller);
+		\draw [->] (system) -- node {$\theta(s)$} (high_frequency);
+		\draw [->] (high_frequency) -- node [name=y] {$\omega$}(output);
+		\draw [-] (y) |- (measurements);
+		\draw [->] (measurements) -| node [pos=0.99] {$-$} (sum);
+		\draw [dashed] (4.9,-1) -- (4.9,1.1) -- (10.3,1.1) -- (10.3,-1) -- (4.9,-1);
+		
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+% -------------------------------
+
+\begin{figure}[!htb]
+	\begin{center}
+		\caption[Block Diagram of Open Loop System (Speed Control)]{Open Loop System from Figure \ref{SPEEDCS}}
+		\label{SPEEDCSZOOM}
+		\usetikzlibrary{decorations.pathreplacing}
+		\begin{tikzpicture}[auto, node distance=2.3cm,>=latex',decoration={brace,mirror,amplitude=7}]
+		\node [input, name=input]                                                     {};
+		\node [block, right of = input]                              (controller)     {$G_p(s)$};
+		\node [block, right of = controller,node distance=3cm]       (system)         {$k_{rd}s$};
+		\node [block, right of = system,node distance=3cm]           (high_frequency) {$\frac{300^2}{s^2 + 212s + 300^2}$};
+		\draw [decorate] ([yshift=-8mm]controller.west) --node[below=2mm]{$Nominal \, Dynamics$} ([yshift=-8mm]system.east);
+		\draw [decorate] ([yshift=-8mm]high_frequency.west) --node[below=2mm]{$High \, Freq' \, Dyn'$} ([yshift=-8mm]high_frequency.east);
+		\node[draw,text width=2.1cm] at (2.2,1.5) {$Mechanical \allowbreak Dynamics$};
+		\node[draw,text width=2.1cm] at (5.3,1.5) {$Derivative$};
+		\node[draw,text width=1.7cm] at (8.3,1.5) {$Low \, Pass \allowbreak Filter$};
+		\node [output, right of=high_frequency]                      (output)         {};
+		\draw [->] (input) --node                           {$I(s)$} (controller);
+		\draw [->] (controller) --node                 {$\theta(s)$} (system);
+		\draw [->] (system) -- node [name=y]           {$\omega(s)$} (high_frequency);
+		\draw [->] (high_frequency) -- node          {$\omega_m(s)$} (output);   
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
