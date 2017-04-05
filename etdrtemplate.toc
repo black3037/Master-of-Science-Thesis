@@ -30,5 +30,8 @@
 \contentsline {chapter}{Bibliography}{21}{section*.26}
 \contentsline {chapter}{\numberline {A}Experiment Documentation}{22}{appendix.A}
 \contentsline {chapter}{\numberline {B}Part Drawings}{23}{appendix.B}
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {C}Laboratory Procedures}{27}{appendix.C}
 \contentsline {chapter}{\numberline {D}Code}{34}{appendix.D}
+=======
+>>>>>>> origin/master
