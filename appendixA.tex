@@ -4,10 +4,30 @@
 
 \cleardoublepage
 
-\chapter{Title for This Appendix}
+\chapter{Experiment Documentation}
 
 \label{Appendix:Key1}
 
-Enter the content for Appendix A in the appendixA.tex file.  If you
-do not have an Appendix A, see comments in the etdrtemplate.tex file
-for instructions on how to remove this page.
+\begin{figure}[htb]
+	\centering
+	\subfloat[300 RPM]{
+		\includegraphics[width=55mm]{figures/appendix/TEK2.png}
+	}
+	\subfloat[500 RPM]{
+		\includegraphics[width=55mm]{figures/appendix/TEK3.png}
+	}
+	\newline
+	\subfloat[1000 RPM]{
+		\includegraphics[width=55mm]{figures/appendix/TEK4.png}
+	}
+	\subfloat[1500 RPM]{
+		\includegraphics[width=55mm]{figures/appendix/TEK5.png}
+	}
+	\newline
+	\hbox to 0mm{}% !!
+	\subfloat[2000 RPM]{
+		\includegraphics[width=55mm]{figures/appendix/TEK6.png}
+	}
+	\caption{Back emf at various motor speeds}
+	\label{back_emf_measurement}
+\end{figure}
