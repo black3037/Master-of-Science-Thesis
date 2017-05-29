@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.4)  28 MAY 2017 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.4)  29 MAY 2017 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,17 +969,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip95
 )
-Package hyperref Info: Option `linktocpage' set `true' on input line 156.
-Package hyperref Info: Option `colorlinks' set `true' on input line 156.
+Package hyperref Info: Option `linktocpage' set `true' on input line 159.
+Package hyperref Info: Option `colorlinks' set `true' on input line 159.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 156.
+(hyperref)                setting the option has no effect on input line 159.
 
-Package hyperref Info: Option `breaklinks' set `true' on input line 156.
+Package hyperref Info: Option `breaklinks' set `true' on input line 159.
 
 Package hyperref Warning: Option `pdfpagelabels' has already been used,
-(hyperref)                setting the option has no effect on input line 156.
+(hyperref)                setting the option has no effect on input line 159.
 
 (./etdrtemplate.aux
 
@@ -991,20 +991,20 @@ LaTeX Warning: Label `makereference2.1.4' multiply defined.
 )
 \openout1 = `etdrtemplate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
  (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count169
@@ -1089,7 +1089,7 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.14}).
 
 \c@lstlisting=\count175
-Package hyperref Info: Link coloring ON on input line 163.
+Package hyperref Info: Link coloring ON on input line 166.
 (c:/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1098,9 +1098,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count176
 )
-LaTeX Info: Redefining \ref on input line 163.
-LaTeX Info: Redefining \pageref on input line 163.
-LaTeX Info: Redefining \nameref on input line 163.
+LaTeX Info: Redefining \ref on input line 166.
+LaTeX Info: Redefining \pageref on input line 166.
+LaTeX Info: Redefining \nameref on input line 166.
 
 (./etdrtemplate.out) (./etdrtemplate.out)
 \@outlinefile=\write7
@@ -1298,35 +1298,35 @@ Chapter 7.
 
 ]
 Appendix A.
-<figures/appendix/TEK2.png, id=537, 602.25pt x 361.35pt>
+<figures/appendix/TEK2.png, id=535, 602.25pt x 361.35pt>
 File: figures/appendix/TEK2.png Graphic file (type png)
 
 <use figures/appendix/TEK2.png>
 Package pdftex.def Info: figures/appendix/TEK2.png used on input line 15.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK3.png, id=538, 602.25pt x 361.35pt>
+<figures/appendix/TEK3.png, id=536, 602.25pt x 361.35pt>
 File: figures/appendix/TEK3.png Graphic file (type png)
 
 <use figures/appendix/TEK3.png>
 Package pdftex.def Info: figures/appendix/TEK3.png used on input line 18.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK4.png, id=539, 602.25pt x 361.35pt>
+<figures/appendix/TEK4.png, id=537, 602.25pt x 361.35pt>
 File: figures/appendix/TEK4.png Graphic file (type png)
 
 <use figures/appendix/TEK4.png>
 Package pdftex.def Info: figures/appendix/TEK4.png used on input line 22.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK5.png, id=540, 602.25pt x 361.35pt>
+<figures/appendix/TEK5.png, id=538, 602.25pt x 361.35pt>
 File: figures/appendix/TEK5.png Graphic file (type png)
 
 <use figures/appendix/TEK5.png>
 Package pdftex.def Info: figures/appendix/TEK5.png used on input line 25.
 (pdftex.def)             Requested size: 156.49014pt x 93.89365pt.
 
-<figures/appendix/TEK6.png, id=541, 602.25pt x 361.35pt>
+<figures/appendix/TEK6.png, id=539, 602.25pt x 361.35pt>
 File: figures/appendix/TEK6.png Graphic file (type png)
 
 <use figures/appendix/TEK6.png>
@@ -1338,7 +1338,7 @@ Package pdftex.def Info: figures/appendix/TEK6.png used on input line 30.
  <./figures/appendix/TEK2.png> <./figures/appendix/TEK3.png> <./figures/appendi
 x/TEK4.png> <./figures/appendix/TEK5.png> <./figures/appendix/TEK6.png>] [27]
 Appendix B.
-<figures/drawings/standoff_drawing.png, id=562, 645.16031pt x 685.05937pt>
+<figures/drawings/standoff_drawing.png, id=558, 645.16031pt x 685.05937pt>
 File: figures/drawings/standoff_drawing.png Graphic file (type png)
 
 <use figures/drawings/standoff_drawing.png>
@@ -1351,7 +1351,7 @@ Overfull \hbox (6.68153pt too wide) in paragraph at lines 12--13
  []
 
 
-<figures/drawings/magnet_holder_drawing.png, id=563, 551.05875pt x 680.5425pt>
+<figures/drawings/magnet_holder_drawing.png, id=559, 551.05875pt x 680.5425pt>
 File: figures/drawings/magnet_holder_drawing.png Graphic file (type png)
 
 <use figures/drawings/magnet_holder_drawing.png>
@@ -1359,7 +1359,7 @@ Package pdftex.def Info: figures/drawings/magnet_holder_drawing.png used on inp
 ut line 22.
 (pdftex.def)             Requested size: 409.63535pt x 505.89pt.
 
-<figures/drawings/torque_transmission_shaft_drawing.png, id=564, 671.50874pt x 
+<figures/drawings/torque_transmission_shaft_drawing.png, id=560, 671.50874pt x 
 680.5425pt>
 File: figures/drawings/torque_transmission_shaft_drawing.png Graphic file (type
  png)
@@ -1379,7 +1379,7 @@ Overfull \hbox (29.41812pt too wide) in paragraph at lines 32--33
 _holder_drawing.png>] [31 <./figures/drawings/torque_transmission_shaft_drawing
 .png>]
 Appendix C.
-<figures/appendix/laboratory5.pdf, id=586, 614.295pt x 794.97pt>
+<figures/appendix/laboratory5.pdf, id=581, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory5.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory5.pdf>
@@ -1392,7 +1392,7 @@ Package pdftex.def Info: figures/appendix/laboratory5.pdf used on input line 14
 .
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<figures/appendix/laboratory5.pdf, id=589, page=1, 614.295pt x 794.97pt>
+<figures/appendix/laboratory5.pdf, id=584, page=1, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory5.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory5.pdf, page 1>
@@ -1428,7 +1428,7 @@ Package pdftex.def Info: figures/appendix/laboratory5.pdf, page1 used on input
 line 14.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [33 <./figures/appendix/laboratory5.pdf>]
-<figures/appendix/laboratory5.pdf, id=712, page=2, 614.295pt x 794.97pt>
+<figures/appendix/laboratory5.pdf, id=707, page=2, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory5.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory5.pdf, page 2>
@@ -1448,7 +1448,7 @@ Package pdftex.def Info: figures/appendix/laboratory5.pdf, page2 used on input
 line 14.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [34 <./figures/appendix/laboratory5.pdf>]
-<figures/appendix/laboratory5.pdf, id=776, page=3, 614.295pt x 794.97pt>
+<figures/appendix/laboratory5.pdf, id=771, page=3, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory5.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory5.pdf, page 3>
@@ -1468,7 +1468,7 @@ Package pdftex.def Info: figures/appendix/laboratory5.pdf, page3 used on input
 line 14.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [35 <./figures/appendix/laboratory5.pdf>] <figures/appendix/laboratory6.pdf, i
-d=785, 614.295pt x 794.97pt>
+d=780, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory6.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory6.pdf>
@@ -1481,7 +1481,7 @@ Package pdftex.def Info: figures/appendix/laboratory6.pdf used on input line 15
 .
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<figures/appendix/laboratory6.pdf, id=788, page=1, 614.295pt x 794.97pt>
+<figures/appendix/laboratory6.pdf, id=783, page=1, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory6.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory6.pdf, page 1>
@@ -1513,7 +1513,7 @@ Package pdftex.def Info: figures/appendix/laboratory6.pdf, page1 used on input
 line 15.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [36 <./figures/appendix/laboratory6.pdf>]
-<figures/appendix/laboratory6.pdf, id=849, page=2, 614.295pt x 794.97pt>
+<figures/appendix/laboratory6.pdf, id=844, page=2, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory6.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory6.pdf, page 2>
@@ -1533,7 +1533,7 @@ Package pdftex.def Info: figures/appendix/laboratory6.pdf, page2 used on input
 line 15.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [37 <./figures/appendix/laboratory6.pdf>]
-<figures/appendix/laboratory6.pdf, id=866, page=3, 614.295pt x 794.97pt>
+<figures/appendix/laboratory6.pdf, id=861, page=3, 614.295pt x 794.97pt>
 File: figures/appendix/laboratory6.pdf Graphic file (type pdf)
 
 <use figures/appendix/laboratory6.pdf, page 3>
@@ -1576,68 +1576,47 @@ LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <8> not available
 
 
 ] [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
 
 (./etdrtemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 400.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 400.
+Package rerunfilecheck Info: File `etdrtemplate.out' has not changed.
+(rerunfilecheck)             Checksum: 99AEE10161F47FA0F7EC523AE6D3F672;2398.
 
-
-Package rerunfilecheck Warning: File `etdrtemplate.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `etdrtemplate.out':
-(rerunfilecheck)             Before: 2FCBE2A56F7707B03718AFA4D4AA6048;2398
-(rerunfilecheck)             After:  99AEE10161F47FA0F7EC523AE6D3F672;2398.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36030 strings out of 493013
- 837976 string characters out of 6137009
+ 36025 strings out of 493013
+ 837898 string characters out of 6137009
  1646081 words of memory out of 5000000
  38664 multiletter control sequences out of 15000+600000
  20946 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,19n,120p,1191b,2351s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.41} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.45} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.40} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.38} has been referenced but does not exist
-, replaced by a fixed one
-
-<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmib10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
-mmib8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c
-:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on etdrtemplate.pdf (49 pages, 1733734 bytes).
+<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmib10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra
+/cmmib8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on etdrtemplate.pdf (49 pages, 1733014 bytes).
 PDF statistics:
- 1040 PDF objects out of 1200 (max. 8388607)
- 857 compressed objects within 9 object streams
- 214 named destinations out of 1000 (max. 500000)
+ 1034 PDF objects out of 1200 (max. 8388607)
+ 851 compressed objects within 9 object streams
+ 209 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 
