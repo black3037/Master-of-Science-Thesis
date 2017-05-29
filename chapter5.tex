@@ -1,5 +1,73 @@
 %% Chapter 5
 
+\cleardoublepage
+
+\chapter{Experiment One}
+\label{chp5}
+
+Chapter \ref{chp5} will experiment with a position control system on the NERMLAB. In this experiment a model of the closed-loop position control system will be developed and will be used to predict the response of the NERMLAB. The main purpose of this experiment is not to develop a better position control system but rather demonstrate the concept of changing pole locations and the characteristic of different response to a changing proportional gain. This will be done by looking frequency of oscillation and decay rate of the oscillations of the various responses. Results produced by the NERMLAB will then be compared against the Motorlab, which is the basis of comparison of all experiments in this thesis. 
+
+\section{Mathematical Model of a Closed-Loop Position Control System}
+
+To simply the mathematical formulation the closed-loop current control system is assumed to be much faster than the mechanical dynamics. As a result of this assumption only the mechanical dynamics and controller will be in the model development.  The best way to start the formulation is to begin with a time domain differential equation of the NERMLAB system. The NERMLAB is composed of only an angular mass and viscous friction in this experiment which can be seen in figure \ref{model}.
+
+\begin{figure}[H]
+	\tikzset{cross/.style={cross out, draw=black, minimum size=10*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+		%default radius will be 1pt. 
+		cross/.default={1.3pt}}
+	\begin{center}
+		\caption[NERMLAB Model]{NERMLAB Model}
+		\label{model}
+		\begin{tikzpicture}[scale=2]
+		\node[text width=3cm] at (1.1,0.75) {\Large $J$};
+		\node[text width=3cm] at (0.5,-0.06) {$b$};
+		\draw [thick] (-0.1,-0.16) -- (1.4,-0.16);
+		\draw (0,-0.08) node[cross,rotate=2] {};
+		\draw (0.1,-0.08) node[cross,rotate=2] {};
+		\draw (0.2,-0.08) node[cross,rotate=2] {};
+		\draw (0.3,-0.08) node[cross,rotate=2] {};
+		\draw (0.4,-0.08) node[cross,rotate=2] {};
+		\draw (0.5,-0.08) node[cross,rotate=2] {};
+		\draw (0.6,-0.08) node[cross,rotate=2] {};
+		\draw (0.7,-0.08) node[cross,rotate=2] {};
+		\draw (0.8,-0.08) node[cross,rotate=2] {};
+		\draw (0.9,-0.08) node[cross,rotate=2] {};
+		\draw (1,-0.08) node[cross,rotate=2] {};
+		\draw (1.1,-0.08) node[cross,rotate=2] {};
+		\draw (1.2,-0.08) node[cross,rotate=2] {};
+		\draw [thick] (0,1.5)  -- (0.2,1.5);
+		\draw [thick] (0,0)  -- (0.2,0);
+		\draw [thick](0,0) to [out=180, in=180] (0,1.5);
+		\draw [thick] (0.2,0) to [out=180, in=180] (0.2,1.5);
+		\draw [thick] (0.3,0) to [out=180, in=180] (0.3,1.5);
+		\draw [thick] (0.3,0) -- (1.3,0);
+		\draw [thick] (0.3,1.5) -- (1.3,1.5);
+		\draw [thick] (1.3,0) to [out=0, in=0] (1.3,1.5);
+		\draw [thick] (1.3,0) to [out=180, in=180] (1.3,1.5);
+		\draw [thick] (1.35,.60) to [out=0, in=0] (1.35,.85);
+		\draw [thick] (1.35,.60) to [out=180, in=180] (1.35,.85);
+		\draw [->, dashed, thick] (0.6,-0.1) to [out=180, in=180] (0.6,1.6) node[above]{$\theta$}; 
+		\draw [->, dashed, thick] (1.2,-0.1) to [out=180, in=180] (1.2,1.6) node[above]{$T$}; 
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+
+\begin{equation} \label{eq:4.1}
+T = k_T i(t) = b \dot \theta(t) + J \ddot \theta(t)
+\end{equation}
+
+Taking the Laplace transform of equation \ref{eq:4.1}:
+\begin{equation} \label{eq:4.2}
+k_T I(s) = (bs + Js^2)\theta(s)
+\end{equation}
+
+The transfer function can then be developed for $G_m$ from equation \ref{eq:4.2}.
+\begin{equation}
+\frac{\theta(s)}{I(s)} = \frac{k_T}{Js^2 + bs}
+\end{equation}
+
+As for the controller transfer function, a proportional gain $K_p$ is being used. To further develop the closed loop transfer function, the block diagram in figure \ref{CLCS} can be used. It is as simple as doing a block diagram reduction by merging the blocks in series and then performing a feedback calculation.
+
 % Set up block-diagram shapes
 % -------------------------------
 \tikzstyle{block} = [draw, rectangle, 
@@ -12,64 +80,70 @@ minimum height=4em, minimum width=7em]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 % -------------------------------
 
-\cleardoublepage
-
-\chapter{Experiment Two}
-\label{chp5}
-
-Chapter \ref{chp5} will cover the concept of 'high frequency dynamics'. High frequency dynamics in this context are the faster dynamics in comparison to the mechanical models in the Motorlab and NERMLAB systems. In experiment 2 the higher frequency or faster dynamics are a low pass filter on the output speed from the nominal plant\footnote{Nominal plant being the combination of the mechanical dynamics and derivative, as seen in figure \ref{SPEEDCSZOOM}}.
-
-% Block diagram 1
+% Block diagram
 % -------------------------------
 \begin{figure}[H]
 	\begin{center}
-		\caption[Block Diagram of Closed Loop Speed Control System]{Closed Loop Speed Control System}
-		\label{SPEEDCS}
+		\caption[Block Diagram of Closed Loop Control System]{Closed Loop Control System}
+		\label{CLCS}
 		
 		\begin{tikzpicture}[auto, node distance=2cm,>=latex']
 		\node [input, name=input] {};
 		\node [sum, right of=input] (sum) {};
-		\node [block, right of=sum] (controller) {$G_c(s)$};
-		\node [block, right of=controller, node distance=3cm] (system) {$G_p(s)$};
-		\node [block, right of=system, node distance=3cm] (high_frequency) {$\frac{k_{dr}300^2s}{s^2 + 212s + 300^2}$};
+		\node [block, right of=sum] (controller) {$G_c$};
+		\node [block, right of=controller, node distance=3cm] (system) {$G_m$};
 		
 		\draw [->] (controller) -- node[name=u] {$I(s)$} (system);
-		\node [output, right of=high_frequency] (output) {};
+		\node [output, right of=system] (output) {};
 		\coordinate [below of=u] (measurements) {};
 		
-		\draw [draw,->] (input) -- node {$\omega_c(s)$} (sum);
+		\draw [draw,->] (input) -- node {$\theta_c(s)$} (sum);
 		\draw [->] (sum) -- node {$E(s)$} (controller);
-		\draw [->] (system) -- node {$\theta(s)$} (high_frequency);
-		\draw [->] (high_frequency) -- node [name=y] {$\omega$}(output);
+		\draw [->] (system) -- node [name=y] {$\theta$}(output);
 		\draw [-] (y) |- (measurements);
 		\draw [->] (measurements) -| node [pos=0.99] {$-$} (sum);
-		\draw [dashed] (4.9,-1) -- (4.9,1.1) -- (10.3,1.1) -- (10.3,-1) -- (4.9,-1);
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+% -------------------------------
+
+Reducing the blocks in series gives the result:
+
+\begin{equation}
+G = G_c G_m = \frac{K_p k_T}{Js^2 + bs}
+\end{equation}
+
+The final reduction is performing a feedback calculation:
+
+\begin{equation}
+\frac{\theta(s)}{\theta_c(s)} = \frac{G}{1 + G} = \frac{K_p k_T}{Js^2 + bs + K_p k_T}
+\end{equation}
+
+% Block diagram
+% -------------------------------
+\begin{figure}[H]
+	\begin{center}
+		\caption[Block Diagram Reduction]{Block Diagram Reduction}
+		\label{CL}
+		
+		\begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
+		\node [input, name=input] {};
+		\node [block2, right of=input] (controller) {$\frac{K_p k_T}{Js^2 + bs + K_p k_T}$};
+		\node [output, right of=controller] (output) {};
+		\draw [draw,->] (input) -- node {$\theta_c(s)$} (controller);
+		\draw [->] (controller) -- node {$\theta(s)$} (output);
 		
 		\end{tikzpicture}
 	\end{center}
 \end{figure}
 % -------------------------------
 
-\begin{figure}[!htb]
+\section{Experimental Results}
+
+\begin{figure}[H]
 	\begin{center}
-		\caption[Block Diagram of Open Loop System (Speed Control)]{Open Loop System from Figure \ref{SPEEDCS}}
-		\label{SPEEDCSZOOM}
-		\usetikzlibrary{decorations.pathreplacing}
-		\begin{tikzpicture}[auto, node distance=2.3cm,>=latex',decoration={brace,mirror,amplitude=7}]
-		\node [input, name=input]                                                     {};
-		\node [block, right of = input]                              (controller)     {$G_p(s)$};
-		\node [block, right of = controller,node distance=3cm]       (system)         {$k_{rd}s$};
-		\node [block, right of = system,node distance=3cm]           (high_frequency) {$\frac{300^2}{s^2 + 212s + 300^2}$};
-		\draw [decorate] ([yshift=-8mm]controller.west) --node[below=2mm]{$Nominal \, Dynamics$} ([yshift=-8mm]system.east);
-		\draw [decorate] ([yshift=-8mm]high_frequency.west) --node[below=2mm]{$High \, Freq' \, Dyn'$} ([yshift=-8mm]high_frequency.east);
-		\node[draw,text width=2.1cm] at (2.2,1.5) {$Mechanical \allowbreak Dynamics$};
-		\node[draw,text width=2.1cm] at (5.3,1.5) {$Derivative$};
-		\node[draw,text width=1.7cm] at (8.3,1.5) {$Low \, Pass \allowbreak Filter$};
-		\node [output, right of=high_frequency]                      (output)         {};
-		\draw [->] (input) --node                           {$I(s)$} (controller);
-		\draw [->] (controller) --node                 {$\theta(s)$} (system);
-		\draw [->] (system) -- node [name=y]           {$\omega(s)$} (high_frequency);
-		\draw [->] (high_frequency) -- node          {$\omega_m(s)$} (output);   
-		\end{tikzpicture}
+		\caption[Base Load Inertia Step Responses]{Base Load Inertia Step Responses}
+		\label{Unloaded_Inertia_Step}
+		\input{figures/matlab_figures/experiment1_unloaded_inertia.tex}
 	\end{center}
 \end{figure}

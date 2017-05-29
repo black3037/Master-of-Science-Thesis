@@ -30,6 +30,7 @@
 \newacro{NERMLAB}[\AC@hyperlink{NERMLAB}{NERMLAB}]{New Earth Robotics Motor Lab}
 \newacro{back-emf}[\AC@hyperlink{back-emf}{back-emf}]{back electromotive force}
 \newacro{RPM}[\AC@hyperlink{RPM}{RPM}]{Rotations Per Minute}
+\newacro{CAD}[\AC@hyperlink{CAD}{CAD}]{Computer Aided Design}
 \@writefile{toc}{\contentsline {chapter}{Acknowledgements}{viii}{section*.5}}
 \citation{2}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}}
@@ -100,7 +101,7 @@
 \newlabel{eq:3.1}{{3.1}{9}{Motor Resistance}{equation.3.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Procedure and Results}{9}{subsection.3.1.1}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Measured motor resistance\relax }}{10}{table.caption.17}}
-\newlabel{table3}{{3.2}{10}{Measured motor resistance\relax }{table.caption.17}{}}
+\newlabel{measured_motor_resistance}{{3.2}{10}{Measured motor resistance\relax }{table.caption.17}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Motor Torque Constant and Back EMF}{10}{section.3.2}}
 \newlabel{eq:3.2}{{3.2}{10}{Motor Torque Constant and Back EMF}{equation.3.2.2}{}}
 \newlabel{eq:3.3}{{3.3}{10}{Motor Torque Constant and Back EMF}{equation.3.2.3}{}}
@@ -111,65 +112,97 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Measured Back EMF vs Speed}}{12}{figure.caption.19}}
 \newlabel{back_emf_plot}{{3.2}{12}{Measured Back EMF vs Speed}{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Mass Moment of Inertia Estimation}{13}{section.3.3}}
+\newlabel{mass_moment_of_inertia_estimation}{{3.3}{13}{Mass Moment of Inertia Estimation}{section.3.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Measured Masses}}{13}{table.caption.20}}
+\newlabel{measured_masses}{{3.4}{13}{Measured Masses}{table.caption.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Measured Rotor Parameters}}{13}{table.caption.21}}
+\newlabel{measured_rotor_parameters}{{3.5}{13}{Measured Rotor Parameters}{table.caption.21}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Software Modeling of Mass Moment of Inertia}{13}{subsection.3.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Mathematical Approximation of Mass Moment of Inertia}{13}{subsection.3.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Thick Walled Cylinder - Mass Moment of Inertia}}{13}{figure.caption.20}}
-\newlabel{thick_walled_cylinder}{{3.3}{13}{Thick Walled Cylinder - Mass Moment of Inertia}{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Motor Inductance}{14}{section.3.4}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiment One}{15}{chapter.4}}
+\AC@undonewlabel{acro:CAD}
+\newlabel{acro:CAD}{{3.3.1}{13}{Software Modeling of Mass Moment of Inertia}{section*.22}{}}
+\acronymused{CAD}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Mathematical Approximation of Mass Moment of Inertia}{14}{subsection.3.3.2}}
+\newlabel{mathmematical_approximation_J}{{3.3.2}{14}{Mathematical Approximation of Mass Moment of Inertia}{subsection.3.3.2}{}}
+\newlabel{eq_J}{{3.5}{14}{Mathematical Approximation of Mass Moment of Inertia}{equation.3.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Thick Walled Cylinder - Mass Moment of Inertia}}{14}{figure.caption.23}}
+\newlabel{thick_walled_cylinder}{{3.3}{14}{Thick Walled Cylinder - Mass Moment of Inertia}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{BLDC Motor Rotor Inertia}{14}{section*.24}}
+\@writefile{toc}{\contentsline {subsubsection}{Washer Inertia}{14}{section*.25}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Measured Washer Radii}}{15}{table.caption.26}}
+\newlabel{measured_washer_radii}{{3.6}{15}{Measured Washer Radii}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Final Results}{15}{section*.27}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Motor Inductance}{15}{section.3.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Viscous Friction}{15}{section.3.5}}
+\newlabel{viscous_friction}{{3.5}{15}{Viscous Friction}{section.3.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Approximating Viscous Friction of a BLDC Motor}{16}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chp4}{{4}{15}{Experiment One}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Mathematical Model of a Closed-Loop Position Control System}{15}{section.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces NERMLAB Model}}{16}{figure.caption.21}}
-\newlabel{model}{{4.1}{16}{NERMLAB Model}{figure.caption.21}{}}
-\newlabel{eq:4.1}{{4.1}{16}{Mathematical Model of a Closed-Loop Position Control System}{equation.4.1.1}{}}
-\newlabel{eq:4.2}{{4.2}{16}{Mathematical Model of a Closed-Loop Position Control System}{equation.4.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Block Diagram of Closed Loop Control System}}{16}{figure.caption.22}}
-\newlabel{CLCS}{{4.2}{16}{Block Diagram of Closed Loop Control System}{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Block Diagram Reduction}}{17}{figure.caption.23}}
-\newlabel{CL}{{4.3}{17}{Block Diagram Reduction}{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiment Two}{18}{chapter.5}}
+\newlabel{chp4}{{4}{16}{Approximating Viscous Friction of a BLDC Motor}{chapter.4}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiment One}{19}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chp5}{{5}{18}{Experiment Two}{chapter.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram of Closed Loop Speed Control System}}{18}{figure.caption.24}}
-\newlabel{SPEEDCS}{{5.1}{18}{Block Diagram of Closed Loop Speed Control System}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Block Diagram of Open Loop System (Speed Control)}}{18}{figure.caption.25}}
-\newlabel{SPEEDCSZOOM}{{5.2}{18}{Block Diagram of Open Loop System (Speed Control)}{figure.caption.25}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Experiment Three}{19}{chapter.6}}
+\newlabel{chp5}{{5}{19}{Experiment One}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Mathematical Model of a Closed-Loop Position Control System}{19}{section.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces NERMLAB Model}}{20}{figure.caption.31}}
+\newlabel{model}{{5.1}{20}{NERMLAB Model}{figure.caption.31}{}}
+\newlabel{eq:4.1}{{5.1}{20}{Mathematical Model of a Closed-Loop Position Control System}{equation.5.1.1}{}}
+\newlabel{eq:4.2}{{5.2}{20}{Mathematical Model of a Closed-Loop Position Control System}{equation.5.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Block Diagram of Closed Loop Control System}}{20}{figure.caption.32}}
+\newlabel{CLCS}{{5.2}{20}{Block Diagram of Closed Loop Control System}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Block Diagram Reduction}}{21}{figure.caption.33}}
+\newlabel{CL}{{5.3}{21}{Block Diagram Reduction}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Experimental Results}{22}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Base Load Inertia Step Responses}}{22}{figure.caption.34}}
+\newlabel{Unloaded_Inertia_Step}{{5.4}{22}{Base Load Inertia Step Responses}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Experiment Two}{23}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chp6}{{6}{19}{Experiment Three}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experiment Four}{20}{chapter.7}}
+\newlabel{chp6}{{6}{23}{Experiment Two}{chapter.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Block Diagram of Closed Loop Speed Control System}}{23}{figure.caption.35}}
+\newlabel{SPEEDCS}{{6.1}{23}{Block Diagram of Closed Loop Speed Control System}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Block Diagram of Open Loop System (Speed Control)}}{23}{figure.caption.36}}
+\newlabel{SPEEDCSZOOM}{{6.2}{23}{Block Diagram of Open Loop System (Speed Control)}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experiment Four}{24}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chp7}{{7}{20}{Experiment Four}{chapter.7}{}}
+\newlabel{chp7}{{7}{24}{Experiment Four}{chapter.7}{}}
 \bibdata{references}
 \bibcite{2}{{1}{}{{}}{{}}}
 \bibcite{1}{{2}{}{{}}{{}}}
 \bibcite{4}{{3}{}{{}}{{}}}
 \bibcite{5}{{4}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{21}{section*.26}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Experiment Documentation}{22}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}{section*.37}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Experiment Documentation}{26}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Appendix:Key1}{{A}{22}{Experiment Documentation}{appendix.A}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Back emf at various motor speeds\relax }}{22}{figure.caption.28}}
-\newlabel{back_emf_measurement}{{A.1}{22}{Back emf at various motor speeds\relax }{figure.caption.28}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {300 RPM}}}{22}{subfigure.1.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {500 RPM}}}{22}{subfigure.1.2}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1000 RPM}}}{22}{subfigure.1.3}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {1500 RPM}}}{22}{subfigure.1.4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {2000 RPM}}}{22}{subfigure.1.5}}
+\newlabel{Appendix:Key1}{{A}{26}{Experiment Documentation}{appendix.A}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Back emf at various motor speeds\relax }}{26}{figure.caption.39}}
+\newlabel{back_emf_measurement}{{A.1}{26}{Back emf at various motor speeds\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {300 RPM}}}{26}{subfigure.1.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {500 RPM}}}{26}{subfigure.1.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1000 RPM}}}{26}{subfigure.1.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {1500 RPM}}}{26}{subfigure.1.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {2000 RPM}}}{26}{subfigure.1.5}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces NERMLAB Parameters\relax }}{27}{table.caption.40}}
+\newlabel{NERMLAB_PARAMETERS}{{A.1}{27}{NERMLAB Parameters\relax }{table.caption.40}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Part Drawings}{28}{appendix.B}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{Appendix:Key2}{{B}{28}{Part Drawings}{appendix.B}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Standoff for NERMLAB}}{29}{figure.caption.41}}
+\newlabel{standoff_drawing}{{B.1}{29}{Standoff for NERMLAB}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Magnet holder for NERMLAB}}{30}{figure.caption.42}}
+\newlabel{magnet_holder_drawing}{{B.2}{30}{Magnet holder for NERMLAB}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Torque Transmission Shaft for NERMLAB}}{31}{figure.caption.43}}
+\newlabel{torque_transmission_shaft_drawing}{{B.3}{31}{Torque Transmission Shaft for NERMLAB}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Laboratory Procedures}{32}{appendix.C}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{Appendix:Key3}{{C}{32}{Laboratory Procedures}{appendix.C}{}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Part Drawings}{23}{appendix.B}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}Code}{39}{appendix.D}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Appendix:Key2}{{B}{23}{Part Drawings}{appendix.B}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Standoff for NERMLAB}}{24}{figure.caption.29}}
-\newlabel{standoff_drawing}{{B.1}{24}{Standoff for NERMLAB}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Magnet holder for NERMLAB}}{25}{figure.caption.30}}
-\newlabel{magnet_holder_drawing}{{B.2}{25}{Magnet holder for NERMLAB}{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Torque Transmission Shaft for NERMLAB}}{26}{figure.caption.31}}
-\newlabel{torque_transmission_shaft_drawing}{{B.3}{26}{Torque Transmission Shaft for NERMLAB}{figure.caption.31}{}}
+\newlabel{Appendix:Key4}{{D}{39}{Code}{appendix.D}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {D.1}{\ignorespaces Back-EMF Plotter\relax }}{40}{figure.caption.44}}
+\@writefile{lol}{\contentsline {lstlisting}{Code/back\textunderscore emf\textunderscore plotter.py}{40}{lstlisting.D.-1}}

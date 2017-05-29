@@ -24,11 +24,15 @@
 \BOOKMARK [2][-]{subsection.3.3.1}{Software Modeling of Mass Moment of Inertia}{section.3.3}% 24
 \BOOKMARK [2][-]{subsection.3.3.2}{Mathematical Approximation of Mass Moment of Inertia}{section.3.3}% 25
 \BOOKMARK [1][-]{section.3.4}{Motor Inductance}{chapter.3}% 26
-\BOOKMARK [0][-]{chapter.4}{Experiment One}{}% 27
-\BOOKMARK [1][-]{section.4.1}{Mathematical Model of a Closed-Loop Position Control System}{chapter.4}% 28
-\BOOKMARK [0][-]{chapter.5}{Experiment Two}{}% 29
-\BOOKMARK [0][-]{chapter.6}{Experiment Three}{}% 30
-\BOOKMARK [0][-]{chapter.7}{Experiment Four}{}% 31
-\BOOKMARK [0][-]{section*.26}{Bibliography}{}% 32
-\BOOKMARK [0][-]{appendix.A}{Experiment Documentation}{}% 33
-\BOOKMARK [0][-]{appendix.B}{Part Drawings}{}% 34
+\BOOKMARK [1][-]{section.3.5}{Viscous Friction}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Approximating Viscous Friction of a BLDC Motor}{}% 28
+\BOOKMARK [0][-]{chapter.5}{Experiment One}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Mathematical Model of a Closed-Loop Position Control System}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Experimental Results}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{Experiment Two}{}% 32
+\BOOKMARK [0][-]{chapter.7}{Experiment Four}{}% 33
+\BOOKMARK [0][-]{section*.37}{Bibliography}{}% 34
+\BOOKMARK [0][-]{appendix.A}{Experiment Documentation}{}% 35
+\BOOKMARK [0][-]{appendix.B}{Part Drawings}{}% 36
+\BOOKMARK [0][-]{appendix.C}{Laboratory Procedures}{}% 37
+\BOOKMARK [0][-]{appendix.D}{Code}{}% 38

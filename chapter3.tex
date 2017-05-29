@@ -39,7 +39,13 @@ V & Motor Voltage\\
 \(K_{e,LL}\) & Line-Line Back Electromotive Force Constant\\
 
 \hline
-J & Mass Moment of Inertia\\
+J & Lumped Mass Moment of Inertia ($J_w + J_r$)\\
+
+\hline
+$J_w$ & Washer Mass Moment of Inertia\\
+
+\hline
+$J_r$ & Rotor Mass Moment of Inertia\\
 
 \hline
 L & Motor Inductance\\
@@ -87,7 +93,7 @@ R = \frac{R_{LL}}{2}
 
 \subsection{Procedure and Results}
 
-In order to gather a good estimate for the phase resistance of the RCTIMER GBM2804 motor, the resistance was measured line-line across all 3 phases. Each set of motor leads were hooked up to a digital multimeter and the values were tabulated for each phase component in table \ref{table3}. An average was then calculated between the different line-line resistances to get the overall resistance of the motor.
+In order to gather a good estimate for the phase resistance of the RCTIMER GBM2804 motor, the resistance was measured line-line across all three phases. Each set of motor leads were hooked up to a digital multimeter and the values were tabulated for each phase component in table \ref{measured_motor_resistance}. An average was then calculated between the different line-line resistances to get the overall resistance of the motor.
 
 \begin{table}[ht]
 	\begin{center}
@@ -106,9 +112,9 @@ In order to gather a good estimate for the phase resistance of the RCTIMER GBM28
 			\hline
 			\end{tabular}
 			
-			\label{table3}
-			\end{center}
-			\end{table}
+			\label{measured_motor_resistance}
+	\end{center}
+\end{table}
 
 Using equation \ref{eq:3.1} it is then possible to find the overall phase resistance of the motor.
 
@@ -189,20 +195,75 @@ Since the relationship between \(k_T\) and \(K_{e,LL}\) is known by equation \re
 \begin{tcolorbox}[
     standard jigsaw,
     opacityback=0]
-\[k_T = 0.0617 \approx 0.06 \quad \frac{N \cdot m}{s} \quad [Sinusoidal]\]
-\[k_T =  0.0713 \approx 0.07 \quad  \frac{N \cdot m}{s} \quad [Trapezoidal]\]
+\[k_T = 0.0617 \approx 0.06 \quad \frac{N \cdot m}{A} \quad [Sinusoidal]\]
+\[k_T =  0.0713 \approx 0.07 \quad  \frac{N \cdot m}{A} \quad [Trapezoidal]\]
 \end{tcolorbox}
 
 \newpage
 \section{Mass Moment of Inertia Estimation}
-Mass moment of inertia \(J\) is the equivalent to mass in a rotational system (commonly referred to as angular mass). More formally is it defined as \(J = \int r^2 dm\), where r is the distance to some mass from an axis of rotation.
+\label{mass_moment_of_inertia_estimation}
+Mass moment of inertia \(J\) is the equivalent to mass in a rotational system (commonly referred to as angular mass). More formally is it defined as \(J = \int r^2 dm\), where r is the distance to a mass from an axis of rotation.
 
-The angular mass of the NERMLAB will be determined in two ways: experimentally determining \(J\) through software modeling, and approximating \(J\) through mathematical formulation. For both setups the mass of the rotating inertia had to be measured.
+The angular mass of the NERMLAB will be determined in three ways: experimentally determining \(J\) through software modeling, approximating \(J\) through mathematical formulation, and using frequency response methods. 
+
+Multiple inertias will be referenced throughout this thesis, one being the base load inertia of the rotor, which is comprised of individual neodymium magnets held by an outer aluminum casing, and the second inertia being a simple steel washer. Most of section \ref{mass_moment_of_inertia_estimation} will be devoted to developing the base load inertia as it has a more complicated geometry than the simple washer, as a result, the washer will be only developed in the section \ref{mathmematical_approximation_J}. Table \ref{measured_masses} and \ref{measured_rotor_parameters} tabulates the various parameters that are referenced in all mass moment of inertia calculations.
+
+\begin{table}[ht]
+	\begin{center}
+		\caption[Measured Masses]{Measured Masses}
+		\begin{tabular}[c]{|c|c|c|}
+			
+			\hline
+			\textbf{Type} & \textbf{Mass (kg)}\\
+			
+			\hline
+			Rotor & 0.018 \\
+			
+			\hline
+			Washer & 0.038 \\
+			
+			\hline
+		\end{tabular}
+		
+		\label{measured_masses}
+	\end{center}
+\end{table}
+
+\begin{table}[ht]
+	\begin{center}
+		\caption[Measured Rotor Parameters]{Measured Rotor Parameters}
+		\begin{tabular}[c]{|c|c|c|}
+			
+			\hline
+			\textbf{Parameter} & \textbf{-}\\
+			
+			\hline
+			Thickness $(t_d)$ &  0.002 m\\
+			
+			\hline
+			Outer Radius $(r_2)$ &  0.0164 m\\
+			
+			\hline
+			Normalized Thickness $(t)$ &  0.1143 m\\
+			
+			\hline
+		\end{tabular}
+		
+		\label{measured_rotor_parameters}
+	\end{center}
+\end{table}
 
 \subsection{Software Modeling of Mass Moment of Inertia}
+\ac{CAD} software was utilized to construct a 3-D model of the neodymium magnets and aluminum casing. CAD software like SolidWorks has the ability to determine complex mass moment of inertias via numerical methods.
+
 \subsection{Mathematical Approximation of Mass Moment of Inertia}
+\label{mathmematical_approximation_J}
 To simplify the mathematical analysis of the mass moment of inertia calculation of the angular mass of the NERMLAB, an engineering assumption will be made that the angular mass is a rotating ring mass. This assumption is valid for the particular motor used in this thesis due to the fact that most of the mass is concentrated around the outside parameter of the motor. The outside ring mass of the motor contributes the most to the inertial load, so the mathematical formulation would result in the following equation:
-\[J_z = \frac{m}{2}(r_1^2 + r_2^2) = mr_2^2(1-t+\frac{t^2}{2})\]
+\begin{equation}
+\label{eq_J}
+J_z = \frac{m}{2}(r_1^2 + r_2^2) = mr_2^2(1-t+\frac{t^2}{2})
+\end{equation}
+Where $t$ is a normalized thickness ratio, $t = (r_2 - r_1)/r_2$.
 
 \begin{figure}[htb]%t=top, b=bottom, h=here
 \begin{center}
@@ -214,6 +275,57 @@ To simplify the mathematical analysis of the mass moment of inertia calculation 
 \end{center}
 \end{figure}
 
+\subsubsection{BLDC Motor Rotor Inertia}
+
+\subsubsection{Washer Inertia}
+Approximating the washer inertia is relatively straight forward as the geometry is simple to measure. As stated in subsection \ref{mathmematical_approximation_J} the only dimensions that need measure are the inner and outer radii, which are provided in table \ref{measured_washer_radii}.
+
+\begin{table}[ht]
+	\begin{center}
+		\caption[Measured Washer Radii]{Measured Washer Radii}
+		\begin{tabular}[c]{|c|c|c|}
+			
+			\hline
+			\textbf{Component} & \textbf{Radius (m)}\\
+			
+			\hline
+			Inner Diameter & 0.021 \\
+			
+			\hline
+			Outer Diameter & 0.0506 \\
+			
+			
+			\hline
+		\end{tabular}
+		
+		\label{measured_washer_radii}
+	\end{center}
+\end{table}
+
+With the measured radii results and mass properties from table \ref{measured_masses}, the washer inertia can be easily approximated using equation \ref{eq_J}.
+
+\begin{tcolorbox}[
+	standard jigsaw,
+	opacityback=0]
+	\[J_w = 1.4256*10^{-5} \ kg \cdot m^2\]
+\end{tcolorbox}
+
+
+\subsubsection{Final Results}
+
+
 \section{Motor Inductance}
 
 \[L = R\tau\]
+
+\section{Viscous Friction}
+\label{viscous_friction}
+
+Section \ref{viscous_friction} will not detail the process conducted to determine the viscous friction of the NERMLAB, this will be left to chapter \ref{chp4}, as Control of Mechanical Systems I already has a laboratory that has students estimate this coefficient. For the sake of completeness the result will be provided below.
+
+\begin{tcolorbox}[
+	standard jigsaw,
+	opacityback=0]
+	\[b = 5.3*10^{-4} \ N\cdot m\cdot s\]
+\end{tcolorbox}
+

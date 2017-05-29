@@ -87,6 +87,21 @@
 \usepackage{float}
 \usepackage{subfig}
 \usepackage{pdfpages}
+\usepackage{pgfplots}
+\usepackage{listings}
+
+% --- Setings for table formating ----
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+% --- ----
+
+% --- Setings for matlab2tikz ----
+\pgfplotsset{scaled x ticks=false}
+% and optionally (as of Pgfplots 1.3): 
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false} 
+% --- ----
 
 % Package allows use of block diagrams
 \usepackage{tikz}
@@ -376,6 +391,8 @@
 \appendix
 \input{appendixA.tex}
 \input{appendixB.tex}
+\input{appendixC.tex}
+\input{appendixD.tex}
 
 \end{document}
 
