@@ -2,29 +2,243 @@
 
 \cleardoublepage
 
-\chapter{Approximating Viscous Friction of a BLDC Motor}
+\chapter{Development of Mathematical Models for NERMLAB}
 \label{chp4}
 
+Chapter \ref{chp4} will develop various mathematical models for the NERMLAB and Motorlab. These models are used throughout this thesis to help compare, analyis, and develop effective control solutions for motor controllers. Rather than have each experiment develop its own model in the corresponding chapter, it will be done here to help simplify the content of each experiment. Since the NERMLAB and Motorlab use different input sources \footnote{Nermlab uses voltage control. Motorlab uses current control.}, different mathematical models will be developed for each system seperately.
+
+\section{Electrical Dynamics}
+\label{electrical_dynamics}
+
 \begin{figure}[H]
+	\centering
+	\caption[Electrical and Mechanical Schematic of NERMLAB]{Electrical and Mechanical Diagram of NERMLAB}
+	\input{figures/NERMLAB_electrical_mechanical_diagram.tex}
+	\label{nermlab_electrical_mechanical_diagram}
+\end{figure}
+
+The electrical dynamics play an important role in motor control when voltage is being used as an input to the system. Using Kirchoff's voltage law it is possible to find the dynamics of figure \ref{nermlab_electrical_mechanical_diagram}.
+
+\[\sum V = 0\]
+
+
+\[V(t) = Ri(t) + \cancelto{0}{L\frac{di}{dt}} + K_e\omega = Ri(t) + K_e\omega\]
+
+
+\begin{equation}
+\label{v_sum_equation}
+V(t) = Ri(t) + K_e\omega
+\end{equation}
+
+Because the pole at -$\frac{R}{L}$ (6596.3 $\frac{rad}{s}$) is 10 times as large as the other dynamics of the system, it can be ignored in the analysis process. From equation \ref{v_sum_equation}, it is now possible to derive an equation for the output torque of the system in terms of supplied voltage.
+
+\begin{equation}
+\label{kt_equation}
+T = k_Ti(t) \Leftrightarrow i(t) = \frac{T(t)}{k_T}
+\end{equation}
+
+Using equations \ref{kt_equation} and \ref{v_sum_equation}, equation \ref{torque_equation} and \ref{current_equation} can be derived, respectively.
+
+\begin{equation}
+\label{torque_equation}
+T(t) = \frac{k_T}{R}(V(t)-K_e\omega)
+\end{equation}
+
+\begin{equation}
+\label{current_equation}
+i(t) = \frac{V(t)-K_e\omega}{R}
+\end{equation}
+
+
+\section{Combined Dynamics - Electrical and Mechanical}
+\label{mechanical_dynamics}
+Section \ref{mechanical_dynamics} will detail the model development for the various electro-mechanical models that are used throughout this thesis. Subsections \ref{position_models} and \ref{speed_models} will derive mathematical models for position and speed systems, respectively, with different input sources. For the model derivations using current as an input source, the closed-loop current control system is assumed to be much faster than the mechanical dynamics. As a result of this assumption only the mechanical dynamics and controller will be in the model development.
+
+
+\subsection{Position Models}
+\label{position_models}
+
+\begin{figure}[H]
+	\tikzset{cross/.style={cross out, draw=black, minimum size=10*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+		%default radius will be 1pt. 
+		cross/.default={1.3pt}}
 	\begin{center}
-		%\caption[Base Load Inertia Step Responses]{Base Load Inertia Step Responses}
-		%\label{Unloaded_Inertia_Step}
-		\input{figures/matlab_figures/viscous_friction.tex}
+		\caption[Position Model]{Position Model}
+		\label{model_chp4}
+		\input{figures/NERMLAB_mechanical_diagram.tex}
 	\end{center}
 \end{figure}
 
+The best way to start the formulation is to begin with a time domain differential equation of the mechanical system. Because the system is composed of only an angular mass and viscous friction (figure \ref{model_chp4}), a describing differential equation can be written as such.
+
+\begin{equation} \label{dynamic_equation_1}
+T = k_T i(t) = b \dot \theta(t) + J \ddot \theta(t)
+\end{equation}
+
+Taking the Laplace transform of equation \ref{dynamic_equation_1}:
+\begin{equation} \label{laplace_transform_1}
+k_T I(s) = (bs + Js^2)\theta(s)
+\end{equation}
+
+The transfer function can then be developed for $G_m$ from equation \ref{laplace_transform_1}.
+\begin{equation}
+\label{motorlab_position_equation}
+\frac{\theta(s)}{I(s)} = \frac{k_T}{Js^2 + bs}
+\end{equation}
+
+
+\subsubsection{Position Model - Voltage as Input}
+Equation \ref{motorlab_position_equation} adequately describes the system for the Motorlab because the electrical dynamics are much faster than the mechanical. However in the case of the NERMLAB, voltage control is used and the same can not be said, and as a result, a different model must be developed. Starting with the differential equations of the electrical dynamics and mechanical dynamics, the following equations are found.
+
+\begin{equation}
+\label{starting_electrical_equation}
+V(t) = Ri(t) + L\frac{di}{dt} + K_e \dot{\theta}(t)
+\end{equation}
+
+\begin{equation}
+\label{starting_mechanical_equation}
+T(t) = J\ddot{\theta}(t) + b \dot{\theta}(t)
+\end{equation}
+
+Taking the Laplace transform of equations \ref{starting_electrical_equation} and \ref{starting_mechanical_equation}.
+
+\begin{equation}
+\label{electrical_laplace}
+V(s) = RI(s) + LsI(s) + K_e s \theta(s)
+\end{equation}
+
+\begin{equation}
+\label{mechanical_laplace}
+T(s) = (Js^2 + bs)\theta(s)
+\end{equation}
+
+From section \ref{electrical_dynamics}, the relationship between torque and current is known. Substituting equation \ref{kt_equation} into equation \ref{mechanical_laplace}, an equation for current is found.
+
+\begin{equation}
+\label{current equation}
+I(s) = \frac{(Js^2 + bs)}{k_T}\theta(s)
+\end{equation}
+
+Subtituting equation \ref{current_equation} into equation \ref{electrical_laplace}, grouping and finding a common denominator in the process, yields equation \ref{final_equation_with_L}.
+
+\begin{equation}
+\label{final_equation_with_L}
+\frac{\theta(s)}{V(s)} = \frac{k_T}{(Ls+R)(Js^2 + bs) + K_ek_Ts}
+\end{equation}
+
+As stated in section \ref{electrical_dynamics}, the electrical dynamics involving $L$ are much larger than any other dynamics in the system, therefore L can be ignored, resulting in the final position equation in terms of voltage as an input source.
+
+\begin{equation}
+\label{position_equation_voltage}
+\frac{\theta(s)}{V(s)} = \frac{k_T}{RJs^2 + (Rb + K_ek_T)s}
+\end{equation}
+
+\subsection{Speed Models}
+\label{speed_models}
+
 \begin{figure}[H]
+	\tikzset{cross/.style={cross out, draw=black, minimum size=10*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+		%default radius will be 1pt. 
+		cross/.default={1.3pt}}
 	\begin{center}
-		%\caption[Base Load Inertia Step Responses]{Base Load Inertia Step Responses}
-		%\label{Unloaded_Inertia_Step}
-		\input{figures/matlab_figures/viscous_friction_voltage.tex}
+		\caption[NERMLAB Speed Model]{NERMLAB Speed Model}
+		\label{model_speed_chp4}
+		\input{figures/NERMLAB_mechanical_speed_diagram.tex}
 	\end{center}
 \end{figure}
 
+The position models just developed in section \ref{position_models} can be used to help derive models for speed. The process is a relatively straight forward one, with one simple substitution needed. Knowing the relationship between speed and position, it is possible to write the following equation.
+
+\begin{equation}
+\label{theta_speed_rel}
+\theta(s) = \frac{\omega(s)}{s}
+\end{equation}
+
+Substituting equation \ref{theta_speed_rel} into \ref{motorlab_position_equation} simply cancels the free integrator, leaving the final equation in terms of speed.
+
+\begin{equation}
+\label{motorlab_speed_equation}
+\frac{\omega(s)}{I(s)} = \frac{k_T}{Js + b}
+\end{equation}
+
+\subsubsection{Speed Model - Voltage as Input}
+
+Just as in section \ref{speed_models}, a simple substitution of equation \ref{theta_speed_rel} into \ref{position_equation_voltage} yields the final speed model in terms of voltage.
+
+\begin{equation}
+\label{speed_equation_voltage}
+\frac{\omega(s)}{V(s)} = \frac{k_T}{RJs + (Rb + K_ek_T)}
+\end{equation}
+
+
+\subsection{Pendulum Model}
+
+The pendulum model is a mathematical formulation for NERMLAB that is used to help find the resonant frequency. It should be noted that the dynamic equations for this setup are non-linear in nature, and as a result, the small angle approximation ($sin(\theta) \approx \theta$) must be used in order to transform the time dependent system into the frequency domain. The small angle approximation is only valid for angles that are smaller than 0.244 radians, as the relative error between $sin(\theta)$ and $\theta$ exceeds 1 percent at this value. This will be taken into account when running experiments on the NERMLAB system.
+
 \begin{figure}[H]
+	\tikzset{cross/.style={cross out, draw=black, minimum size=10*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+		%default radius will be 1pt. 
+		cross/.default={1.3pt}}
 	\begin{center}
-		%\caption[Base Load Inertia Step Responses]{Base Load Inertia Step Responses}
-		%\label{Unloaded_Inertia_Step}
-		\input{figures/matlab_figures/initial_condition_decay.tex}
+		\caption[NERMLAB Pendulum Model]{NERMLAB Pendulum Model}
+		\label{model_pendulum_chp4}
+		\input{figures/NERMLAB_pendulum_model.tex}
 	\end{center}
 \end{figure}
+
+The best way to start the derivation is to find the describing differential equations for both the mechanical and electrical system. In the case of the pendulum setup, the electrical dynamics are simply the torque the motor provides the pendulum with, which was found in section \ref{electrical_dynamics}, equation \ref{torque_equation}.
+
+\begin{equation}
+\label{pendulum_starting_dynamics}
+J \ddot{\theta}(t) = -mgl\theta(t) - b\dot{\theta}(t) + T_{input}
+\end{equation}
+
+Substituting the electrical motor torque (eq. \ref{torque_equation}), into equation \ref{pendulum_starting_dynamics}.
+
+\begin{equation}
+J \ddot{\theta}(t) = -mgl\theta(t) - b\dot{\theta}(t) + \frac{k_T}{R}(V(t)-K_e \dot{\theta}(t))
+\end{equation}
+
+\[J \ddot{\theta}(t) + mgl\theta(t) + b\dot{\theta}(t) + \frac{k_T K_e}{R}\dot{\theta}(t)= \frac{k_T}{R}V(t)\]
+
+Taking the Laplace transform of the above equation yields:
+
+\[(Js^2 + mgl + bs + \frac{k_T K_e}{R}s)\theta(s) = \frac{k_T}{R}V(s)  \]
+
+\[\frac{JRs^2 + mglR + bRs + k_T K_es}{R}\theta(s) = \frac{k_T}{R}V(s) \]
+
+\begin{equation}
+\label{pendulum_model_unsimplified}
+\frac{\theta(s)}{V(s)} = \frac{k_T}{JRs^2 + (bR + k_T K_e)s + mglR}
+\end{equation}
+
+Putting equation \ref{pendulum_model_unsimplified} into a standard second order form yields:
+
+\begin{equation}
+\label{pendulum_non_lumped}
+\frac{\theta(s)}{V(s)} = \frac{\frac{k_T}{JR}}{s^2 + (\frac{b}{J} + \frac{k_T K_e}{JR})s + \frac{mgl}{J}}
+\end{equation}
+
+To further simplify the model, lumped coefficients for friction and the trailing term of equation \ref{pendulum_non_lumped} will be made since they are comprised of statically defined variables.
+
+\begin{equation}
+\label{lumped_friction}
+b_l = \frac{b}{J} + \frac{k_T K_e}{JR}
+\end{equation}
+
+\begin{equation}
+\label{lumped_wp}
+\omega_p = \frac{mgl}{J}
+\end{equation}
+
+\begin{equation}
+\label{lumped_kt}
+k_{T,l} = \frac{k_T}{JR}
+\end{equation}
+
+\begin{equation}
+\label{pendulum_model}
+\frac{\theta(s)}{V(s)} = \frac{k_{T,l}}{s^2 + b_ls + \omega_p}
+\end{equation}
+
+It should be noted that $J$ is the pendulum's inertia and not the rotors in equation \ref{pendulum_model}; likewise, $l$ is the distance to the center of mass of the pendulum.

@@ -1,0 +1,49 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=0,
+xmax=250,
+xlabel style={font=\color{white!15!black}},
+xlabel={Motor Speed (rad/s)},
+ymin=0,
+ymax=18,
+ylabel style={font=\color{white!15!black}},
+ylabel={Measured Voltage (V)},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Back EMF Constant Estimate},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted},
+legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=black, line width=1.5pt, draw=none, mark size=2.8pt, mark=x, mark options={solid, black}]
+  table[row sep=crcr]{%
+0	0\\
+31.4159265358979	2.32\\
+52.3598775598299	3.8\\
+104.71975511966	7.55\\
+157.07963267949	11\\
+209.43951023932	15\\
+};
+\addlegendentry{Data}
+
+\addplot [color=black, dashed]
+  table[row sep=crcr]{%
+0	0\\
+250	17.825\\
+};
+\addlegendentry{Ke Estimate}
+
+\end{axis}
+\end{tikzpicture}%

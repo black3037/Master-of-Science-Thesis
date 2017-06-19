@@ -10,30 +10,43 @@
 % +--------------------------------------------------------------------+
 
 \chapter{Apparatus}
-\label{makereference2}
+\label{chp2}
+This chapter will discuss two apparatus pieces used for conducting a series of five experiments included in this thesis and will, in detail, describe the purpose, design, and recreation of the equipment. Section ~\ref{makereference2.1} will describe the NERMLAB, including the hardware implementation, design of components, basic functionality, and use of the position sensor. In comparison, section ~\ref{makereference2.2} will describe the Motorlab, the model currently being used in Kansas State University's engineering laboratories, and how it differs from NERMLAB. 
 
-Two pieces of apparatus were used to conduct the experiments in this thesis. This chapter will detail the purpose, design and recreation of the equipment. Section ~\ref{makereference2.1} will cover the new Motorlab, including the hardware implementation, design of components, and basic functionality. Section ~\ref{makereference2.1.2} will detail how a new type of position sensor works that is used for the position measurements of the Motorlab. Then, the older Motorlab will be discussed and compared to the new Motorlab in section ~\ref{makereference2.2}.
-
-\section{New Motorlab}
+\section{NERMLAB}
 \label{makereference2.1} 
 
-The new Motorlab is a reimplementation of older laboratory hardware created by Dr. Schinstock and Dr. White for Control of Mechanical Systems I at Kansas State University. The Motorlab allows users to connect the theoretical ideas of control theory with those in practice. (Maybe include applications of the motorlab and its use in the laboratory).
+\begin{figure}[htb]%t=top, b=bottom, h=here
+	\begin{center}
+		\includegraphics[height=4in]{figures/NERMLAB.png}
+		
+		\caption[NERMLAB]{NERMLAB}
+		
+		\label{NERMLAB_picture}
+	\end{center}
+\end{figure}
 
-\subsection{Hardware}
+The NERMLAB is a reimplementation of older laboratory hardware created by Dr. Dale Schinstock and Dr. Warren White for Control of Mechanical Systems I at Kansas State University. This equipment allows users to connect the theoretical ideas of control theory with those in practice.
+
+\subsection{NERMLAB Hardware}
 \label{makereference2.1.1} 
 
-The new Motorlab consists of several key pieces of hardware, namely a \ac{MPU}, motor driver, and a \ac{BLDC} motor. The main MPU of the Motorlab is the STM32 Nucleo, which allows Arduino attachment shields and other STM boards to be attached for added functionality. For the purposes of the Motorlab, a motor driver was required to drive a brushless DC motor, namely a RCTIMER GBM2804. An X-Nucleo-IHM07M1 (a three-phase brushless DC motor driver) was selected to be the primary driver for the Motorlab.
+The NERMLAB consists of several key pieces of hardware, including: an STM32 Nucleo development board, motor driver, and a \ac{BLDC} motor (Figure \ref{NERMLAB_picture}). The STM32 Nucleo houses a STM32F401RE \ac{MPU}, which is a 32-bit processor with an 84 MHz clock speed and up to 512 Kbytes of flash memory. The STM32 Nucleo also allows Arduino shields and other STM boards to be attached for added functionality.  
+
+A motor driver was required to drive a brushless DC motor. As a result, an X-Nucleo-IHM07M1 (a three-phase brushless DC motor driver) was selected to be the primary driver for the NERMLAB. The X-Nucleo has a nominal operating voltage of 8V-48 VDC with a 2.8 A peak current output, which is sufficient to drive a BLDC gimbal motor, such as the RCTIMER GBM2804, which is the primary motor used in this thesis. 
+
+The RCTIMER GBM2804 is a 100 turn BLDC motor that has a hollow shaft which allows placement of a position sensor for feedback control purposes. Motor specifications were not given by the manufacturer of this motor, so chapter \ref{chp3} details the experiments that were conducted to find the various parameters needed to adequately model the entire NERMLAB system.
 
 \subsection{Position Sensor}
 \label{makereference2.1.2} 
 
-The main purpose of the Motorlab is to conduct control laboratory experiments, as a result, feedback via sensor readings is necessary to do such control. The typical way to do position and speed control of mechanical systems and motors is to use position feedback via an encoder. An encoder is a device that converts angular position of a motor shaft to an analog or digital signal that can be processed by an MPU. In the case of the Motorlab, an on-axis magnetic encoder is used to do position feedback. Special equipment had to be designed in order to use this type of encoder, and will be detailed in section ~\ref{makereference2.1.2}.  
+The main purpose of the NERMLAB is to conduct control laboratory experiments. To accomplish this, feedback via sensor readings is necessary, and the typical way to do position and speed control is to use position feedback via an encoder. An encoder is a device that converts angular position of a motor shaft to an analog or digital signal that can be processed by an MPU. In the case of the NERMLAB, an on-axis magnetic encoder is used to do position feedback. Special equipment had to be designed in order to use this type of encoder, and will be detailed in section ~\ref{makereference2.1.2}.  
 
-The encoder that is being used on the Motorlab consists of 14-bit on-axis magnetic rotary position sensor chip, specifically the AS5047D by AMS \footnote{AMS is an Austrian analog sensor and semi-conductor manufacturer}. The position sensor chip provides high resolution absolute angle measurements through a full 360 degree range \footnote{These chips typically provide a maximum resolution of 2000 steps/revolution in decimal mode and 2048 steps/revolution in binary mode}. In addition to the fast absolute angle measurement system that the position sensor provides, it also has \ac{DAEC} that provides position control systems with near 0 latency \citep{1}.  
+The encoder that is being used consists of 14-bit on-axis magnetic rotary position sensor chip, specifically the AS5047D by AMS \footnote{AMS is an Austrian analog sensor and semi-conductor manufacturer}. The position sensor chip provides high resolution absolute angle measurements through a full 360 degree range \footnote{These chips typically provide a maximum resolution of 2000 steps/revolution in decimal mode and 2048 steps/revolution in binary mode}. In addition to the fast absolute angle measurement system that the position sensor provides, it also has \ac{DAEC} that provides position control systems with near 0 latency \citep{1}.  
 
-The AS5047D chip is a magnetic sensor that utilizes the Hall-effect. The chip works by taking the Hall sensors and converting the perpendicular magnetic field on the surface of the chip to a voltage. The voltage signals are filtered and amplified in order to calculate the angle of the magnetic vector. In order for position measurements to be taken, a small diametrically opposed magnet must be placed on the shaft of the equipment being measured. The magnet and AS5047D are contactless, meaning there is a small air gap between the chip and magnet. As the magnet rotates above the chip (Figure~\ref{magnet_rotation}), angle measurements are calculate and transmitted through the chip \citep{1}. The Motorlab uses the AS5047D chip primarily as a position and speed control system. 
+The AS5047D chip is a magnetic sensor that utilizes the Hall-effect. The chip works by taking the Hall sensors and converting the perpendicular magnetic field on the surface of the chip to a voltage. The voltage signals are filtered and amplified in order to calculate the angle of the magnetic vector. In order for position measurements to be taken, a small diametrically opposed magnet must be placed on the shaft of the equipment being measured. The magnet and AS5047D are contactless, meaning there is a small air gap between the chip and magnet. As the magnet rotates above the chip (Figure~\ref{magnet_rotation}), angle measurements are calculated and transmitted through the chip \citep{1}. 
 
-\begin{figure}[htb]%t=top, b=bottom, h=here
+\begin{figure}[htb]
 \begin{center}
     \includegraphics[height=4in]{figures/magnetic_field.png}
 
@@ -43,82 +56,170 @@ The AS5047D chip is a magnetic sensor that utilizes the Hall-effect. The chip wo
 \end{center}
 \end{figure}
 
-\subsection{Motorlab Parts}
-\label{makereference2.1.2} 
+\subsubsection{Sensor Output}
+The AS5047D has multiple input/output types that can be used for feedback and chip programming. A \ac{SPI} is the main input to the chip that allows a one time programming operation to be carried out. The chip also outputs an ABI and \ac{PWM} signal that can be used in feedback measurements. In the case of the NERMLAB, the ABI output is the chosen signal type to be used for encoder readings. The ABI is an incremental type signal that has two 90 degree offset signals that indicate motor direction. To determine the motor's position, one only needs to count the number of pulses coming from the chip either from the leading or falling edge of the signal. From there its possible to use equation \ref{encoder_angle} to come up with the position in radians, where $n_{resol}$ is the resolution of the encoder output and $n_{count}$ is the current encoder count.
 
-Along with the hardware mentioned in section ~\ref{makereference2.1.1}, three components were needed to be developed in order to bring the Motorlab to fruition: a printed circuit board that houses the on-axis magnetic rotary position sensor, a spacer to put distance between the circuit board and the motor, and a magnet holder, which holds one diametrically opposed magnet ~\footnote{Diametrically opposed meaning the north and south poles of the magnet are in-plane as opposed to top/bottom poles. Reference figure ~\ref{magnet_rotation} for further clarification}. Both the spacer and magnet holder which can be seen in figure \ref{section_view_motorlab} had to be 3D printed in order to achieve the required specifications of the apparatus setup. Detailed drawings of these two parts can be found in Appendix \ref{Appendix:Key2}, figures \ref{standoff_drawing} and \ref{magnet_holder_drawing}, if reproduction is desired. Along with the two 3D printed parts, a printed circuit board had to be designed by Eric Patterson of Kansas State University to allow the position sensor to communicate with the rest of the hardware.
+\begin{equation}
+\label{encoder_angle}
+\theta_{rad} = 2\pi \frac{n_{count}}{n_{resol}}
+\end{equation}
 
-Because of variability in resolution of current 3D printers, care was given to the design of the magnet holder \footnote{Because of this variability in resolution, the magnet holder was printed in iterations, varying the diameter of the spline to insure a tight fit in the motor shaft}. A spline was used for both the shaft of the magnet holder and the section that holds the magnet itself. The spline allowed for greater tolerances in the parts, meaning the magnet holder could be easier to press fit into the motor, and likewise allowed easier removal of the diametrically opposed magnet.
+\subsubsection{Sensor Noise}
 
-\begin{figure}[htb]%t=top, b=bottom, h=here
-
-    \includegraphics[height=4in]{figures/section_view_motorlab_assembly.png}
-
-    \caption[Section View of Motorlab Assembly]{Section View of Motorlab Assembly}
-
-    \label{section_view_motorlab}
+\begin{figure}[H]
+	\centering
+	\caption[Sensor Noise with Changing Speed]{Sensor Noise with Changing Speed}
+	\label{sensor_noise_figure}
+	\input{figures/sensor_noise.tex}
 \end{figure}
 
-\subsection{Motorlab Cost}
+While the AS5047D does have a high resolution output in comparison to other cheap encoders, the chip does suffer from measurement inaccuracies. These inaccuracies could be a result of the magnet's rotation or the tolerance and fit of the magnet holder. It is when doing speed control that these inaccuracies show up on the NERMLAB as superimposed noise on the response. It was found through experimentation that the frequency of the noise was proportional to the speed of the rotor. The NERMLAB was run at incremental speeds, and the frequency of the noise was tabulated in table \ref{noise_experiment}. It is evident from figure \ref{sensor_noise_figure} that as the speed of the rotor is increased, the frequency of the noise increases proportionally, as described by equation \ref{noise_equation}.
+
+\begin{equation}
+\label{noise_equation}
+f = 0.2741v
+\end{equation}
+
+\begin{table}[ht]
+	\begin{center}
+		\caption{Noise Experiment}
+		\begin{tabular}[c]{ c c c }
+			\label{noise_experiment}
+			\textbf{Average Speed (rad/s)} & \textbf{Frequency (Hz)} & \textbf{Input Voltage (V)} \\
+			
+			\Xhline{2\arrayrulewidth}
+			\rowcolor{gray!20}
+			11.67 & 4.386 & 1.5\\
+			
+			
+			21.93 & 5.55 & 2.5\\
+			
+			\rowcolor{gray!20}
+			32.07 & 8.196 & 3.5\\
+			
+			
+			42.10 & 10.869 & 4.5\\
+			
+			\rowcolor{gray!20}
+			52.00 & 13.510 & 5.5\\
+			
+			
+			62.79 & 18.518 & 6.5\\
+			
+			\Xhline{2\arrayrulewidth}
+		\end{tabular}
+		
+		\label{table1}
+	\end{center}
+\end{table}
+
+While the exact problem is not pinpointed in this thesis, the measurement inaccuracy does not greatly affect the experimental results and is more so another feature that must be realized when doing system analysis.
+
+\subsection{NERMLAB Parts}
+\label{makereference2.1.2} 
+
+\begin{figure}[H]%t=top, b=bottom, h=here
+	
+	\includegraphics[height=4in]{figures/section_view_motorlab_assembly.png}
+	
+	\caption[Section View of Motorlab Assembly]{Section View of Motorlab Assembly}
+	
+	\label{section_view_motorlab}
+\end{figure}
+
+Along with the hardware mentioned in section ~\ref{makereference2.1.1}, three components were needed to be developed in order to bring the NERMLAB to fruition: a printed circuit board that houses the on-axis magnetic rotary position sensor, a spacer to put distance between the circuit board and the motor, and a magnet holder, which holds one diametrically opposed magnet ~\footnote{Diametrically opposed meaning the north and south poles of the magnet are in-plane as opposed to top/bottom poles. Reference figure ~\ref{magnet_rotation} for further clarification}. Both the spacer and magnet holder, which can be seen in figure \ref{section_view_motorlab}, had to be 3D printed in order to achieve the required specifications of the apparatus setup. Detailed drawings of these two parts can be found in Appendix \ref{Appendix:Key2}, figures \ref{standoff_drawing} and \ref{magnet_holder_drawing}, if reproduction is desired. Along with the two 3D printed parts, a printed circuit board had to be designed to allow the position sensor to communicate with the rest of the hardware.
+
+Because of variability in resolution of current 3D printers, care was given to the design of the magnet holder \footnote{Because of this variability in resolution, the magnet holder was printed in iterations, varying the diameter.}. A spline was used for both the shaft of the magnet holder and the section that holds the magnet itself. The spline allowed for greater tolerances in the parts, meaning the magnet holder could be easier to press fit into the motor, and likewise allowed easier removal of the diametrically opposed magnet.
+
+\subsection{NERMLAB Cost}
 \label{makereference2.1.4} 
 
-Text here.
+Table \ref{NERMALB_Cost} lists the components that make up the NERMLAB system and their associated price at the writing of this thesis.
 
 % Table of motor lab costs
 \begin{table}[ht]
 \begin{center}
 \caption{Motorlab expenditure report}
-\begin{tabular}[c]{|c|c|c|}
-
-\hline
+\begin{tabular}[c]{ l l l }
+\label{NERMALB_Cost}
 \textbf{Component} & \textbf{Brand/Manufacture} & \textbf{Cost} \\
 
-\hline
+\Xhline{2\arrayrulewidth}
+\rowcolor{gray!20}
 BLDC Motor & RCTIMER GBM2804 & 11.94 USD\\
 
-\hline
+
 Position Sensor & AS5047D AMS & 4.21 USD\\
 
-\hline
+\rowcolor{gray!20}
 ST32 Nucleo & STMicroelectronics & 10.12 USD\\
 
-\hline
+
 X-Nucleo-IHM07M1 & STMicroelectronics & 9.80 USD\\
 
-\hline
+\rowcolor{gray!20}
 Magnet & - & 3.00 USD\\
 
-\hline
+
 Printed Circuit Board & - & 30.00 USD\\
 
 \hline
+\rowcolor{gray!20}
 & \textbf{TOTAL COST} & \textbf{69.07 USD}\\
-\hline
+
+\Xhline{2\arrayrulewidth}
 \end{tabular}
 
 \label{table1}
 \end{center}
 \end{table}
 
-% end of table
-\newpage
-\subsection{Motorlab GUI}
-\label{makereference2.1.4} 
-\begin{figure}[htb]
-\begin{center}
-    \includegraphics[height=4in]{figures/old_motorlab_gui.png}
+\subsection{NERMLAB GUI}
 
-    \caption[Motorlab GUI in MATLAB]{Motorlab GUI in MATLAB}
-
-    \label{motorlab_gui_in_matlab}
-\end{center}
+\begin{figure}[H] 
+	\begin{center}
+		\includegraphics[height=4in]{figures/NERMLABGUI.png}
+		
+		\caption[NERMLAB GUI]{NERMLAB GUI}
+		
+		\label{NERMLAB_GUI}
+	\end{center}
 \end{figure}
 
-The Motorlab interfaces with a \ac{GUI} coded in MATLAB to allow users to run various laboratory experiments on the hardware. It allows the selection of various wave types, frequency, controller gains, and sample rate that get sent to the Motorlab. After the parameters of the experiment are setup, the GUI can run the Motorlab, which in turn sends the experimental data to the workspace of MATLAB in the form of a matrix. The MATLAB GUI can be seen in figure \ref{motorlab_gui_in_matlab}.
+The NERMLAB GUI is an alternative way of interacting with the NERMLAB without having to hardcode values and re-flashing every time an experiment needs to be run. The user simply enters the desired settings into the GUI, which then triggers serial events in the back-end. The GUI is coded in python 2.7, utilzing a variety of different libraries such as the PyQT4 framework that allows cross platform development of GUI applications, matplotlib for plotting purposes, and variety of signal processing toolboxes for employing frequency response and model responses. 
+
+\ac{JSON} is the main communication protocol that is used to allow back and forth communication between the NERMLAB and GUI interface. The GUI sends out JSON messages whenever a user triggers an event, and the back-end code of the NERMLAB then sees the object in its buffer, which is decoded into key-value pairings that can be processed.
+
+Much of the NERMLAB GUI is still in development and is left as future work. Features that still need implementation would include: being able to flash hex and binary files directly to the NERMLAB system from the GUI, allowing python code to interact with the GUI/NERMLAB system, and better plotting capabilities for instant data visualization.
 
 \section{Motorlab}
 \label{makereference2.2} 
 
-The Motorlab is a piece of laboratory equipment developed by Dr. Dale Schinstock and Dr. Warren N. White at Kansas State University. It has been in service at the university for over 15 years, and as a result is a time-tested piece of laboratory hardware that has proven to be reliable in terms of providing quality practical control theory application to students enrolled in the class Control of Mechanical Systems I. Because the Motorlab's hardware components were designed and created to insure a very clear translation of laboratory results, in addition to the Motorlab having a much larger operating limit and bandwidth than students use in laboratory practice, this represents to a good base model to compare the results of the apparatus in this thesis too.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=4in]{figures/motorlab.png}
+		
+		\caption[Motorlab]{Motorlab}
+		
+		\label{motorlab_hardware}
+	\end{center}
+\end{figure}
 
-Various hardware make up the Motorlab, namely, a high quality BLDC motor, BLDC servo amplifier by Copley Controls Corp., and a ST Discovery board \footnote{STMicroelectronics is a Switzerland based micro-controller manufacturer}. Typically the Motorlabs run a cost of about 700 USD per lab station \citep{4}.
+The Motorlab has been in service at Kansas State University for over 15 years, and as a result, is a time-tested piece of laboratory hardware that has proven to be reliable in providing quality data. Additionally, the Motorlab's hardware components were selected to ensure a very clear translation of laboratory results, allowing the Motorlab to have a much larger operating limit and bandwidth than students use in laboratory. As a result, the Motorlab represents to a good base model to compare the results of the NERMLAB apparatus in this thesis too.
+
+\subsection{Motorlab Hardware}
+Various hardware make up the Motorlab, namely, a BLDC motor, BLDC servo amplifier by Copley Controls Corp., and a ST Discovery board \footnote{The ST Discovery Board is a 32-bit micro controller development board}. Typically the Motorlabs run a cost of about 700 USD per lab station \citep{4}; however, this estimate does not include things like manufacturing, design and labor, as these processes were carried out at Kansas State University. Appendix \ref{AppendixE}, figure \ref{MOTORLAB_PARAMETERS} hosts the system parameters that make up the Motorlab.
+
+\subsection{Motorlab GUI}
+\label{makereference2.1.4} 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=4in]{figures/old_motorlab_gui.png}
+		
+		\caption[Motorlab GUI in MATLAB]{Motorlab GUI in MATLAB}
+		
+		\label{motorlab_gui_in_matlab}
+	\end{center}
+\end{figure}
+
+The Motorlab interfaces with a \ac{GUI} coded in MATLAB to allow users to run various laboratory experiments on the hardware. It allows the selection of various wave types, frequency, controller gains, and sample rate that get sent to the Motorlab. After the parameters of the experiment are setup, the GUI can run the Motorlab, which in turn sends the experimental data to the workspace of MATLAB in the form of a matrix. The MATLAB GUI can be seen in figure \ref{motorlab_gui_in_matlab}.
